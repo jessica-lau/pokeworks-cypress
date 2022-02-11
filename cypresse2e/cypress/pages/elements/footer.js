@@ -74,6 +74,26 @@ class Footer {
   getContact() {
     return cy.get(this.footerItemListTwo).eq(4);
   }
+
+  getTermsOfUse() {
+    return cy.get(this.termAndPolicy).eq(0);
+  }
+
+  getPrivacyPolicy() {
+    return cy.get(this.termAndPolicy).eq(1);
+  }
+
+  getFacebook() {
+    return cy.get(this.socialMedia).eq(0);
+  }
+
+  getTwitter() {
+    return cy.get(this.socialMedia).eq(1);
+  }
+
+  getInstagram() {
+    return cy.get(this.socialMedia).eq(2);
+  }
 }
 
 export default Footer;
