@@ -1,4 +1,5 @@
 import Footer from "../../pages/elements/footer";
+import emailAndPassword from "../../fixtures/emailAndPassword.json";
 
 describe("Pokeworks footer section", () => {
   const footer = new Footer();
@@ -17,6 +18,11 @@ describe("Pokeworks footer section", () => {
       footer
         .getFooterDescription()
         .should("contain", "Sign up to receive exclusive deals");
+    });
+
+    it("User types and submits email in the subscription input", () => {
+      footer.getEmailInput().type(emailAndPassword.validEmail);
+      footer.getSubmitEmail().click();
     });
   });
 });
