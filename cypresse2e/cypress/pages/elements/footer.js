@@ -39,7 +39,7 @@ class Footer {
     return cy.get(this.footerItemListOne).eq(0);
   }
 
-  getLocation() {
+  getLocations() {
     return cy.get(this.footerItemListOne).eq(1);
   }
 
