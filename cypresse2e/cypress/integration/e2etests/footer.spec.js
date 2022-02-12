@@ -14,7 +14,7 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Pokeworks description is visible", () => {
-      footer.getfooterHeading().should("contain", "GET FRESH UPDATES");
+      footer.getFooterHeading().should("contain", "GET FRESH UPDATES");
       footer
         .getFooterDescription()
         .should("contain", "Sign up to receive exclusive deals");
@@ -52,7 +52,9 @@ describe("Pokeworks footer section", () => {
 
     it("Jobs link is visible and clickable", () => {
       footer.getJobs().should("be.visible").click();
+      cy.wait(2000);
       cy.url().should("include", "/jobs");
+      cy.wait(2000);
     });
 
     it("Rewards link is visible and clickable", () => {
@@ -77,12 +79,7 @@ describe("Pokeworks footer section", () => {
 
     it("FAQ link is visible and clickable", () => {
       footer.getFaqs().should("be.visible").click();
-      cy.url().should("include", "/faq");
-    });
-
-    it("FAQs link is visible and clickable", () => {
-      footer.getFaqs().should("be.visible").click();
-      cy.url().should("include", "/faq");
+      cy.url().should("include", "faq/");
     });
 
     it("Contact Us link is visible and clickable", () => {

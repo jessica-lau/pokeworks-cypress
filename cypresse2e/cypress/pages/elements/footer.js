@@ -7,7 +7,7 @@ class Footer {
   footerItemListOne = "#footer-column-1-nav-list > li";
   footerItemListTwo = "#footer-column-2-nav-list > li";
   termAndPolicy = "#footer-fineprint-nav-list > li";
-  socialMedia = "#social-icons-list > li";
+  socialMedia = ".footer-column .social-icons-list li";
 
   constructor() {}
 
