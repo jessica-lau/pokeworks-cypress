@@ -51,10 +51,10 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Jobs link is visible and clickable", () => {
-      footer.getJobs().should("be.visible").click();
-      cy.wait(2000);
-      cy.url().should("include", "jobs");
-      cy.wait(2000);
+      cy.get('a[href="https://pokeworks.com/jobs/"]')
+        .should("be.visible")
+        .click();
+      cy.url().should("include", "/jobs");
     });
 
     it("Rewards link is visible and clickable", () => {
@@ -78,10 +78,8 @@ describe("Pokeworks footer section", () => {
     });
 
     it("FAQ link is visible and clickable", () => {
-      footer.getFaqs().should("be.visible").click();
-      cy.wait(2000);
+      cy.get('a[href="/faq"]').should("be.visible").click();
       cy.url().should("include", "/faq");
-      cy.wait(2000);
     });
 
     it("Contact Us link is visible and clickable", () => {
