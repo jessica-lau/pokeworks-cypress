@@ -11,5 +11,14 @@ describe("Pokeworks header section", () => {
     it("Pokeworks logo in header is visible and clickable", () => {
       header.getLogo().should("be.visible").click();
     });
+
+    it("Order Now button is clickable and redirects to order page", () => {
+      header.getOrderButton().should("be.visible").click();
+      cy.url().should("include", "order");
+    });
+
+    it("Menu toggle is visible and clickable", () => {
+      header.getMenu().should("be.visible").click();
+    });
   });
 });
