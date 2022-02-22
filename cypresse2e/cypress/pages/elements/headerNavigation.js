@@ -1,7 +1,7 @@
 class Header {
-  logo = ".logo-mobile-wrapper";
-  orderNowButton = ".order-now-mobile-btn";
-  menu = "button .mobile-menu-trigger";
+  logo = ".logo-desktop-wrapper";
+  accountAndOrderButton = ".account-n-order-wrapper a";
+  headerLinks = "#header-nav-list li";
 
   constructor() {}
 
@@ -13,12 +13,32 @@ class Header {
     return cy.get(this.logo);
   }
 
+  getSignInButton() {
+    return cy.get(this.accountAndOrderButton).eq(0);
+  }
+
   getOrderButton() {
-    return cy.get(this.orderNowButton);
+    return cy.get(this.accountAndOrderButton).eq(1);
   }
 
   getMenu() {
-    return cy.get(this.menu);
+    return cy.get(this.headerLinks).eq(0);
+  }
+
+  getLocations() {
+    return cy.get(this.headerLinks).eq(1);
+  }
+
+  getNutrition() {
+    return cy.get(this.headerLinks).eq(2);
+  }
+
+  getCatering() {
+    return cy.get(this.headerLinks).eq(3);
+  }
+
+  getFranchise() {
+    return cy.get(this.headerLinks).eq(4);
   }
 }
 
