@@ -12,13 +12,39 @@ describe("Pokeworks header section", () => {
       header.getLogo().should("be.visible").click();
     });
 
+    it("Sign In button is clickable and redirects to Sign In page", () => {
+      header.getSignInButton().should("be.visible").click();
+      cy.url().should("include", "order");
+    });
+
     it("Order Now button is clickable and redirects to order page", () => {
       header.getOrderButton().should("be.visible").click();
       cy.url().should("include", "order");
     });
 
-    it("Menu toggle is visible and clickable", () => {
+    it("Menu link in header is visible and clickable", () => {
       header.getMenu().should("be.visible").click();
+      cy.url().should("include", "order");
+    });
+
+    it("Locations link in header is visible and clickable", () => {
+      header.getLocations().should("be.visible").click();
+      cy.url().should("include", "/locations");
+    });
+
+    it("Nutrition link in header is visible and clickable", () => {
+      header.getNutrition().should("be.visible").click();
+      cy.url().should("include", "/nutrition");
+    });
+
+    it("Catering link in header is visible and clickable", () => {
+      header.getCatering().should("be.visible").click();
+      cy.url().should("include", "/catering");
+    });
+
+    it("Own a Franchise link in header is visible and clickable", () => {
+      header.getFranchise().should("be.visible").click();
+      cy.url().should("include", "/franchise-with-pokeworks");
     });
   });
 });
