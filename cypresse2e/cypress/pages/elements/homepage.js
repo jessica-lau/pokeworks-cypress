@@ -1,4 +1,7 @@
 class HomePage {
+  slideBanner = ".frontpage-hero";
+  pokeworksRewards = ".rewards-breaker";
+
   constructor() {}
 
   visit() {
