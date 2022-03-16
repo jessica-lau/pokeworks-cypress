@@ -1,3 +1,11 @@
-class Homepage {}
+class HomePage {
+  slideBanner = ".frontpage-hero";
+  pokeworksRewards = ".rewards-breaker";
 
-export default Homepage;
+  constructor() {}
+
+  visit() {
+    cy.visit();
+  }
+}
+export default HomePage;
