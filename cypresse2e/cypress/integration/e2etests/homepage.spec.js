@@ -11,8 +11,8 @@ describe("Pokeworks landing page", () => {
 
     it("Top banner slides are visible and previous and next arrows are clickable", () => {
       homepage.getSlideBanner().should("be.visible");
-      homepage.getPrevBtn().eq(0).click();
-      homepage.getNextBtn().eq(1).click();
+      homepage.getPrevBtn().eq(0).dblclick();
+      homepage.getNextBtn().eq(0).dblclick();
     });
   });
 });
