@@ -8,5 +8,11 @@ describe("Pokeworks landing page", () => {
     beforeEach(() => {
       homepage.visit();
     });
+
+    it("Top banner slides are visible and previous and next arrows are clickable", () => {
+      homepage.getSlideBanner().should("be.visible");
+      homepage.getPrevBtn().eq(0).click();
+      homepage.getNextBtn().eq(1).click();
+    });
   });
 });
