@@ -27,5 +27,7 @@ describe("Pokeworks landing page", () => {
       homepage.getSignIn().contains("SIGN IN").click();
       cy.url().should("include", "order");
     });
+
+    it("Food options are visible, clickable, and redirects to order page", () => {});
   });
 });
