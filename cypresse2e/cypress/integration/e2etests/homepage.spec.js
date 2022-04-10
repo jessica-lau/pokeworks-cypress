@@ -28,6 +28,14 @@ describe("Pokeworks landing page", () => {
       cy.url().should("include", "order");
     });
 
+    it("Heading in food options section is visible", () => {
+      homepage
+        .getSectionHeader()
+        .should("be.visible")
+        .and("contain", "Satisfy your craving for a Poke Bowl or Burrito")
+        .and("contain", "Keep it 100");
+    });
+
     it("Food options are visible, clickable, and redirects to order page", () => {});
   });
 });
