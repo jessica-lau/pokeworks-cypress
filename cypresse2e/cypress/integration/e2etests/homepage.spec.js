@@ -37,9 +37,18 @@ describe("Pokeworks landing page", () => {
         .and("contain", "Keep it 100");
     });
 
-    it("Food options are visible, clickable, and redirects to order page", () => {
-      homepage.getFoodGrid().eq(0).should("be.visible").click();
-      cy.url().should("include", "order");
+    // it("Food options are visible, clickable, and redirects to order page", () => {
+    //   homepage.getFoodGrid().eq(0).should("be.visible").click();
+    //   cy.url().should("include", "order");
+    // });
+
+    it("Heading in rewards section is visible", () => {
+      homepage
+        .getSectionHeader()
+        .eq(1)
+        .should("be.visible")
+        .and("contain", "JOIN POKEWORKS REWARDS")
+        .and("contain", "Download our Pokeworks Rewards app");
     });
   });
 });
