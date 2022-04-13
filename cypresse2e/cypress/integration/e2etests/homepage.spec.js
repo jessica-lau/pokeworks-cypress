@@ -31,6 +31,7 @@ describe("Pokeworks landing page", () => {
     it("Heading in food options section is visible", () => {
       homepage
         .getSectionHeader()
+        .eq(0)
         .should("be.visible")
         .and("contain", "Satisfy your craving for a Poke Bowl or Burrito")
         .and("contain", "Keep it 100");
