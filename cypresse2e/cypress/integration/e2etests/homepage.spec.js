@@ -50,5 +50,10 @@ describe("Pokeworks landing page", () => {
         .and("contain", "JOIN POKEWORKS REWARDS")
         .and("contain", "Download our Pokeworks Rewards app");
     });
+
+    it("Google Play and Apple Store buttons are visible and clickable", () => {
+      homepage.getAppStore().eq(0).should("be.visible").click();
+      homepage.getAppStore().eq(1).should("be.visible").click();
+    });
   });
 });
