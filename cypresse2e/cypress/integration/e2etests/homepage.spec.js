@@ -51,6 +51,12 @@ describe("Pokeworks landing page", () => {
         .and("contain", "Download our Pokeworks Rewards app");
     });
 
+    it("Rewards list of perks is visible", () => {
+      homepage.getRewardsList().eq(0).should("contain", "when you spend");
+      homepage.getRewardsList().eq(1).should("contain", "off your first order");
+      homepage.getRewardsList().eq(2).should("contain", "delivery everyday");
+    });
+
     it("Google Play and Apple Store buttons are visible and clickable", () => {
       homepage.getAppStore().eq(0).should("be.visible").click();
       homepage.getAppStore().eq(1).should("be.visible").click();
