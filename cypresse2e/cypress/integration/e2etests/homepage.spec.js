@@ -57,6 +57,11 @@ describe("Pokeworks landing page", () => {
       homepage.getRewardsList().eq(2).should("contain", "delivery everyday");
     });
 
+    it("Rewards mobile image left and right arrows are clickable", () => {
+      homepage.getPrevBtn().should("be.visible").click();
+      homepage.getNextBtn().should("be.visible").click();
+    });
+
     it("Google Play and Apple Store buttons are visible and clickable", () => {
       homepage.getAppStore().eq(0).should("be.visible").click();
       homepage.getAppStore().eq(1).should("be.visible").click();
