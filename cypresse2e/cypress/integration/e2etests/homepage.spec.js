@@ -58,8 +58,8 @@ describe("Pokeworks landing page", () => {
     });
 
     it("Rewards mobile image left and right swipe arrows are clickable", () => {
-      homepage.getPrevBtn().should("be.visible").click();
-      homepage.getNextBtn().should("be.visible").click();
+      homepage.getPrevBtn().should("be.visible").dblclick();
+      homepage.getNextBtn().should("be.visible").dblclick();
     });
 
     it("Google Play and Apple Store buttons are visible and clickable", () => {
