@@ -5,7 +5,6 @@ class HomePage {
   signIn = ".rewards-signin-btn";
   sectionHeader = ".section-header";
   foodGrid = ".pokeyourway-grid a";
-  orderAppSection = ".app-order";
   rewardsList = ".steps-half ol li";
   appStore = ".app-badge-row a";
   mobilePrevBtn = ".swiper-button-prev";
@@ -39,10 +38,6 @@ class HomePage {
 
   getFoodGrid() {
     return cy.get(this.foodGrid);
-  }
-
-  getOrderApp() {
-    return cy.get(this.orderAppSection);
   }
 
   getRewardsList() {
