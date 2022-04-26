@@ -37,20 +37,20 @@ describe("Pokeworks landing page", () => {
         .and("contain", "Keep it 100");
     });
 
-    // it("Food options are visible, clickable, and redirects to order page", () => {
-    //   homepage.getFoodGrid().eq(0).should("be.visible").click();
-    //   cy.url().should("include", "order");
-    // homepage.getFoodGrid().eq(1).should("be.visible").click();
-    // cy.url().should("include", "order");
-    // homepage.getFoodGrid().eq(2).should("be.visible").click();
-    // cy.url().should("include", "order");
-    // homepage.getFoodGrid().eq(3).should("be.visible").click();
-    // cy.url().should("include", "order");
-    // homepage.getFoodGrid().eq(4).should("be.visible").click();
-    // cy.url().should("include", "order");
-    // homepage.getFoodGrid().eq(5).should("be.visible").click();
-    // cy.url().should("include", "order");
-    // });
+    it("Food options are visible, clickable, and redirects to order page", () => {
+      homepage.getFoodGrid().eq(0).should("be.visible").click();
+      cy.url().should("include", "order");
+      homepage.getFoodGrid().eq(1).should("be.visible").click();
+      cy.url().should("include", "order");
+      homepage.getFoodGrid().eq(2).should("be.visible").click();
+      cy.url().should("include", "order");
+      homepage.getFoodGrid().eq(3).should("be.visible").click();
+      cy.url().should("include", "order");
+      homepage.getFoodGrid().eq(4).should("be.visible").click();
+      cy.url().should("include", "order");
+      homepage.getFoodGrid().eq(5).should("be.visible").click();
+      cy.url().should("include", "order");
+    });
 
     it("Heading in rewards section is visible", () => {
       homepage
