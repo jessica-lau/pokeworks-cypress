@@ -1,5 +1,6 @@
 class HomePage {
   slideBanner = ".frontpage-hero";
+  slideButton = ".slide-order-btn";
   pokeworksRewards = ".rewards-breaker";
   createAccount = ".rewards-cta-btn";
   signIn = ".rewards-signin-btn";
@@ -18,6 +19,10 @@ class HomePage {
 
   getSlideBanner() {
     return cy.get(this.slideBanner);
+  }
+
+  getSlideButton() {
+    return cy.get(this.slideButton);
   }
 
   getRewards() {
