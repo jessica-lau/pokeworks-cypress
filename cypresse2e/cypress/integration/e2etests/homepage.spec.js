@@ -14,6 +14,10 @@ describe("Pokeworks landing page", () => {
       homepage.getNextBtn().eq(0).dblclick();
     });
 
+    it("Button on banner slides is visible and clickable", () => {
+      homepage.getSlideButton().should("be.visible").click();
+    });
+
     it("Pokeworks join rewards image is visible", () => {
       homepage.getRewards().should("be.visible");
     });
