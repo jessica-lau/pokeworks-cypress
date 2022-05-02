@@ -6,9 +6,8 @@ class HomePage {
   signIn = ".rewards-signin-btn";
   sectionHeader = ".section-header";
   foodGrid = ".pokeyourway-grid a";
-  logoNav = "#nav-logo";
   rewardsList = ".steps-half ol li";
-  appStore = ".app-badge-row a";
+  appStore = ".steps-half > .app-badge-row a";
   mobilePrevBtn = ".swiper-button-prev";
   mobileNextBtn = ".swiper-button-next";
 
@@ -44,10 +43,6 @@ class HomePage {
 
   getFoodGrid() {
     return cy.get(this.foodGrid);
-  }
-
-  getLogo() {
-    return cy.get(this.logoNav);
   }
 
   getRewardsList() {

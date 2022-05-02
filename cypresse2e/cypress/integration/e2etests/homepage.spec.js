@@ -14,8 +14,8 @@ describe("Pokeworks landing page", () => {
       homepage.getNextBtn().eq(0).dblclick();
     });
 
-    it("Button on banner slides is visible and clickable", () => {
-      homepage.getSlideButton().should("be.visible").click({ multiple: true });
+    it("Button on banner slides is visible", () => {
+      homepage.getSlideButton().should("be.visible");
     });
 
     it("Pokeworks join rewards image is visible", () => {
@@ -44,19 +44,19 @@ describe("Pokeworks landing page", () => {
     it("Food options are visible, clickable, and redirects to order page", () => {
       homepage.getFoodGrid().eq(0).should("be.visible").click();
       cy.url().should("include", "order");
-      homepage.getLogo();
+      homepage.visit();
       homepage.getFoodGrid().eq(1).should("be.visible").click();
       cy.url().should("include", "order");
-      homepage.getLogo();
+      homepage.visit();
       homepage.getFoodGrid().eq(2).should("be.visible").click();
       cy.url().should("include", "order");
-      homepage.getLogo();
+      homepage.visit();
       homepage.getFoodGrid().eq(3).should("be.visible").click();
       cy.url().should("include", "order");
-      homepage.getLogo();
+      homepage.visit();
       homepage.getFoodGrid().eq(4).should("be.visible").click();
       cy.url().should("include", "order");
-      homepage.getLogo();
+      homepage.visit();
       homepage.getFoodGrid().eq(5).should("be.visible").click();
       cy.url().should("include", "order");
     });
@@ -73,7 +73,7 @@ describe("Pokeworks landing page", () => {
     it("Rewards list of perks is visible", () => {
       homepage.getRewardsList().eq(0).should("contain", "when you spend");
       homepage.getRewardsList().eq(1).should("contain", "off your first order");
-      homepage.getRewardsList().eq(2).should("contain", "delivery everyday");
+      homepage.getRewardsList().eq(2).should("contain", "delivery EVERYDAY");
     });
 
     it("Rewards mobile image left and right swipe arrows are clickable", () => {
