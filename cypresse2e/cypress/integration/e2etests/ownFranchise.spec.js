@@ -9,4 +9,8 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise.visit();
     });
   });
+
+  it("Slide images on Franchise page are visible", () => {
+    franchise.getSlideImages().should("be.visible");
+  });
 });
