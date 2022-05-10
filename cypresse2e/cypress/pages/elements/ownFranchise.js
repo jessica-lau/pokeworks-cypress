@@ -1,5 +1,5 @@
 class Franchise {
-  slideImage = ".alpine-slider";
+  slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
   franchiseFormDetails = ".form > form > p";
 
@@ -9,7 +9,7 @@ class Franchise {
     cy.visit("franchise-with-pokeworks/");
   }
 
-  getSlideImage() {
+  getSlideImages() {
     return cy.get(this.slideImage);
   }
 
