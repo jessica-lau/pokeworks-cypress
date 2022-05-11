@@ -2,6 +2,8 @@ class Franchise {
   slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
   franchiseFormDetails = ".form > form > p";
+  video = ".video-section > div > div > iframe";
+  images = ".images-section > div > div img";
 
   constructor() {}
 
@@ -19,6 +21,14 @@ class Franchise {
 
   getFranchiseFormDetails() {
     return cy.get(this.franchiseFormDetails);
+  }
+
+  getYoutubeVideo() {
+    return cy.get(this.video);
+  }
+
+  getPokeWorksImages() {
+    return cy.get(this.images);
   }
 }
 
