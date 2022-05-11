@@ -4,6 +4,8 @@ class Franchise {
   franchiseFormDetails = ".form > form > p";
   video = ".video-section > div > div > iframe";
   images = ".images-section > div > div img";
+  socialMedia = ".franchise-form-footer-section > div > div ul";
+  privacyPolicy = ".franchise-form-footer-section > div > div a";
 
   constructor() {}
 
@@ -29,6 +31,14 @@ class Franchise {
 
   getPokeWorksImages() {
     return cy.get(this.images);
+  }
+
+  getSocialMedia() {
+    return cy.get(this.socialMedia);
+  }
+
+  getPrivacyPolicy() {
+    return cy.get(this.privacyPolicy);
   }
 }
 
