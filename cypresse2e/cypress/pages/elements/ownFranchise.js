@@ -4,7 +4,7 @@ class Franchise {
   franchiseFormDetails = ".form > form > p";
   video = ".video-section > div > div > iframe";
   images = ".images-section > div > div img";
-  socialMedia = ".franchise-form-footer-section > div > div ul";
+  socialMedia = ".franchise-form-footer-section > div > div ul li";
   privacyPolicy = ".franchise-form-footer-section > div > div a";
 
   constructor() {}

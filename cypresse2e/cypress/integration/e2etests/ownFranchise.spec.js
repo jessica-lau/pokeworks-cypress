@@ -24,6 +24,12 @@ describe("Pokeworks Own a Franchise Page", () => {
       );
   });
 
+  it("Social media icons on Franchise page is visible and clickable", () => {
+    franchise.getSocialMedia().eq(0).should("be.visible").click();
+    franchise.getSocialMedia().eq(1).should("be.visible").click();
+    franchise.getSocialMedia().eq(2).should("be.visible").click();
+  });
+
   it("Privacy Policy link on the Franchise page is visible and clickable", () => {
     franchise.getPrivacyPolicy().should("be.visible").click();
     cy.url().includes("privacy-policy");
