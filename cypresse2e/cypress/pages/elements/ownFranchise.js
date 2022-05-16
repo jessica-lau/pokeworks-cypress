@@ -1,7 +1,7 @@
 class Franchise {
   slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
-  franchiseFormDetails = ".form > form > p";
+  franchiseFormDetails = ".form > form > p > input";
   video = ".video-section > div > div > iframe";
   images = ".images-section > div > div img";
   socialMedia = ".franchise-form-footer-section > div > div ul li";
