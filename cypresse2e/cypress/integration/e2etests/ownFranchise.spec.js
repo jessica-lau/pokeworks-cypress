@@ -24,6 +24,10 @@ describe("Pokeworks Own a Franchise Page", () => {
       );
   });
 
+  it("Form heading should be visible", () => {
+    franchise.getFranchiseFormDetails().contains("multi-unit franchise owners");
+  });
+
   it("Social media icons on Franchise page is visible and clickable", () => {
     franchise.getSocialMedia().eq(0).should("be.visible").click();
     franchise.getSocialMedia().eq(1).should("be.visible").click();
