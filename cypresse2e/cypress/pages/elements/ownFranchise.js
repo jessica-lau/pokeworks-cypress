@@ -1,7 +1,8 @@
 class Franchise {
   slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
-  franchiseFormDetails = ".form > form > p > input";
+  franchiseFormHeading = ".form > p";
+  franchiseFormDetails = ".form > div > form > p > input";
   video = ".video-section > div > div > iframe";
   images = ".images-section > div > div img";
   socialMedia = ".franchise-form-footer-section > div > div ul li";
@@ -19,6 +20,10 @@ class Franchise {
 
   getFranchiseInfo() {
     return cy.get(this.franchiseInfo);
+  }
+
+  getFranchiseFormHeading() {
+    return cy.get(this.franchiseFormHeading);
   }
 
   getFranchiseFormDetails() {
