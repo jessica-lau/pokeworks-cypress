@@ -28,6 +28,28 @@ describe("Pokeworks Own a Franchise Page", () => {
     franchise.getFranchiseFormHeading().contains("multi-unit franchise owners");
   });
 
+  it("User fills out form with details", () => {
+    franchise.getFranchiseFormDetails().eq(0).click().type("Jane");
+    franchise.getFranchiseFormDetails().eq(1).click().type("Doe");
+    franchise.getFranchiseFormDetails().eq(2).click().type("333-333-3333");
+    franchise
+      .getFranchiseFormDetails()
+      .eq(3)
+      .click()
+      .type(emailAndPassword.validEmail);
+    franchise.getFranchiseFormDetails().eq(4).click().type("NY");
+    franchise.getFranchiseFormDetails().eq(5).click().type("01000");
+    franchise.getFranchiseFormDetails().eq(6).click().type("Google");
+    franchise.getFranchiseFormDetails().eq(7).click().type("US");
+    franchise.getFranchiseFormDetails().eq(8).click().type("100,000");
+    franchise.getFranchiseFormDetails().eq(9).click().type("500,000");
+    franchise
+      .getFranchiseFormDetails()
+      .eq(10)
+      .click()
+      .type("Opened local pizza shop in lower Manhattan for 5 years.");
+  });
+
   it("Social media icons on Franchise page is visible and clickable", () => {
     franchise.getSocialMedia().eq(0).should("be.visible").click();
     franchise.getSocialMedia().eq(1).should("be.visible").click();
