@@ -3,6 +3,8 @@ class Franchise {
   franchiseInfo = ".left-side-content";
   franchiseFormHeading = ".form > p";
   franchiseFormDetails = ".form > div > form > p > input";
+  franchiseFormDropdown = ".form > div > form > p > select > option";
+  franchiseExperience = ".form > div > form > p > select > textarea";
   video = ".video-section > div > div > iframe";
   images = ".images-section > div > div img";
   socialMedia = ".franchise-form-footer-section > div > div ul li";
@@ -28,6 +30,14 @@ class Franchise {
 
   getFranchiseFormDetails() {
     return cy.get(this.franchiseFormDetails);
+  }
+
+  getDropdownOptions() {
+    return cy.get(this.franchiseFormDropdown);
+  }
+
+  getFranchiseExperience() {
+    return cy.get(this.franchiseExperience);
   }
 
   getYoutubeVideo() {
