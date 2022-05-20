@@ -39,10 +39,10 @@ describe("Pokeworks Own a Franchise Page", () => {
       .type(emailAndPassword.validEmail);
     franchise.getFranchiseFormDetails().eq(4).click().type("NY");
     franchise.getFranchiseFormDetails().eq(5).click().type("01000");
-    franchise.getFranchiseFormDetails().eq(6).click().type("Google");
+    franchise.getDropdownOptions().eq(0).click().eq(1).click();
     franchise.getFranchiseFormDetails().eq(7).click().type("US");
-    franchise.getFranchiseFormDetails().eq(8).click().type("100,000");
-    franchise.getFranchiseFormDetails().eq(9).click().type("500,000");
+    franchise.getDropdownOptions.eq(1).click().eq(3).click();
+    franchise.getDropdownOptions().eq(2).click().eq(2).click();
     franchise
       .getFranchiseFormDetails()
       .eq(10)
