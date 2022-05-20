@@ -44,8 +44,7 @@ describe("Pokeworks Own a Franchise Page", () => {
     franchise.getDropdownOptions.eq(1).click().eq(3).click();
     franchise.getDropdownOptions().eq(2).click().eq(2).click();
     franchise
-      .getFranchiseFormDetails()
-      .eq(10)
+      .getFranchiseExperience()
       .click()
       .type("Opened local pizza shop in lower Manhattan for 5 years.");
   });
