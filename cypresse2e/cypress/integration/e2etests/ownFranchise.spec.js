@@ -53,6 +53,12 @@ describe("Pokeworks Own a Franchise Page", () => {
     franchise.getYoutubeVideo().should("be.visible").dblclick()
   })
 
+  it("Images on Franchise page are visible", () => {
+    franchise.getPokeWorksImages().eq(0).should("be.visible")
+    franchise.getPokeWorksImages().eq(1).should("be.visible")
+    franchise.getPokeWorksImages().eq(2).should("be.visible")
+  })
+
   it("Social media icons on Franchise page is visible and clickable", () => {
     franchise.getSocialMedia().eq(0).should("be.visible").click();
     franchise.getSocialMedia().eq(1).should("be.visible").click();
