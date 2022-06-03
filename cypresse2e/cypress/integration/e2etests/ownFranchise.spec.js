@@ -49,7 +49,7 @@ describe("Pokeworks Own a Franchise Page", () => {
       .type("Opened local pizza shop in lower Manhattan for 5 years.");
   });
 
-  it("Video on Franchise page is visible", () => {
+  it("Video on Franchise page is visible and playable", () => {
     franchise.getYoutubeVideo().should("be.visible").dblclick()
   })
 
