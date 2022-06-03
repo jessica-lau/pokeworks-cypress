@@ -49,6 +49,10 @@ describe("Pokeworks Own a Franchise Page", () => {
       .type("Opened local pizza shop in lower Manhattan for 5 years.");
   });
 
+  it("Form Submit button is visible and clickable", () => {
+    cy.get("input").should("have.value", "Submit")
+  })
+
   it("Video on Franchise page is visible and playable", () => {
     franchise.getYoutubeVideo().should("be.visible").dblclick()
   })
