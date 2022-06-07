@@ -50,7 +50,7 @@ describe("Pokeworks Own a Franchise Page", () => {
   });
 
   it("Form Submit button is visible and clickable", () => {
-    cy.get("input").should("have.value", "Submit")
+    cy.get("input").should("have.value", "Submit").click()
   })
 
   it("Video on Franchise page is visible and playable", () => {
