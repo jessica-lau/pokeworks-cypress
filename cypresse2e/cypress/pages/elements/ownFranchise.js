@@ -3,6 +3,7 @@ class Franchise {
   franchiseInfo = ".left-side-content";
   franchiseFormHeading = ".form > p";
   franchiseFormDetails = ".form > div > form > p > input";
+  formErrorMessage = ".form > div > form > p > label > span > span";
   franchiseFormDropdown = ".form > div > form > p > select > option";
   franchiseExperience = ".form > div > form > p > select > textarea";
   video = ".video-section > div > div > iframe";
@@ -30,6 +31,10 @@ class Franchise {
 
   getFranchiseFormDetails() {
     return cy.get(this.franchiseFormDetails);
+  }
+
+  getFormError() {
+    return cy.get(this.formErrorMessage)
   }
 
   getDropdownOptions() {

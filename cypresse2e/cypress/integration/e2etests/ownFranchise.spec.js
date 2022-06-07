@@ -73,4 +73,9 @@ describe("Pokeworks Own a Franchise Page", () => {
     franchise.getPrivacyPolicy().should("be.visible").click();
     cy.url().includes("privacy-policy");
   });
+
+  //negative scenarios
+  it("Leaving all fields on form blank and clicking Submit triggers error", () => {
+
+  })
 });
