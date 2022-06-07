@@ -76,6 +76,13 @@ describe("Pokeworks Own a Franchise Page", () => {
 
   //negative scenarios
   it("Leaving all fields on form blank and clicking Submit triggers error", () => {
-
+    cy.get("input").should("have.value", "Submit").click()
+    franchise.getFormError().eq(0).should("contain", "The field is required.")
+    franchise.getFormError().eq(1).should("contain", "The field is required.")
+    franchise.getFormError().eq(3).should("contain", "The field is required.")
+    franchise.getFormError().eq(4).should("contain", "The field is required.")
+    franchise.getFormError().eq(5).should("contain", "The field is required.")
+    franchise.getFormError().eq(7).should("contain", "The field is required.")
+    franchise.getFormError().eq(10).should("contain", "The field is required.")
   })
 });
