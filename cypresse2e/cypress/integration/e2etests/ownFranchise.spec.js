@@ -84,5 +84,6 @@ describe("Pokeworks Own a Franchise Page", () => {
     franchise.getFormError().eq(5).should("contain", "The field is required.")
     franchise.getFormError().eq(7).should("contain", "The field is required.")
     franchise.getFormError().eq(10).should("contain", "The field is required.")
+    franchise.getTryAgainError().should("contain", "One or more fields have an error. Please check and try again.")
   })
 });
