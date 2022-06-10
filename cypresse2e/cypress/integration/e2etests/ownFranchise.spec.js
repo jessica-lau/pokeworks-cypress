@@ -86,4 +86,25 @@ describe("Pokeworks Own a Franchise Page", () => {
     franchise.getFormError().eq(10).should("contain", "The field is required.")
     franchise.getTryAgainError().should("contain", "One or more fields have an error. Please check and try again.")
   })
+
+  it("Populating email field with invalid email triggers error", () => {
+    franchise.getFranchiseFormDetails().eq(0).click().type("Jane");
+    franchise.getFranchiseFormDetails().eq(1).click().type("Doe");
+    franchise.getFranchiseFormDetails().eq(2).click().type("333-333-3333");
+    franchise
+      .getFranchiseFormDetails()
+      .eq(3)
+      .click()
+      .type(emailAndPassword.invalidEmail);
+    franchise.getFranchiseFormDetails().eq(4).click().type("NY");
+    franchise.getFranchiseFormDetails().eq(5).click().type("01000");
+    franchise.getDropdownOptions().eq(0).click().eq(1).click();
+    franchise.getFranchiseFormDetails().eq(7).click().type("US");
+    franchise.getDropdownOptions.eq(1).click().eq(3).click();
+    franchise.getDropdownOptions().eq(2).click().eq(2).click();
+    franchise
+      .getFranchiseExperience()
+      .click()
+      .type("Opened local pizza shop in lower Manhattan for 5 years.");
+  })
 });
