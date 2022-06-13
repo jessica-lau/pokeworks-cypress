@@ -110,5 +110,5 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise.getFormError().eq(3).should("contain", "The e-mail address entered is invalid.");
       franchise.getTryAgainError().should("contain", "One or more fields have an error. Please check and try again.")
       });
-    });
+});
   });
