@@ -108,5 +108,6 @@ describe("Pokeworks Own a Franchise Page", () => {
       .type("Opened local pizza shop in lower Manhattan for 5 years.");
       cy.get("input").should("have.value", "Submit").click();
       franchise.getFormError().eq(3).should("contain", "The e-mail address entered is invalid.");
+      franchise.getTryAgainError().should("contain", "One or more fields have an error. Please check and try again.")
   })
 });
