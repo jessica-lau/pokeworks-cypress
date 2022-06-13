@@ -5,7 +5,6 @@ describe("Pokeworks Own a Franchise Page", () => {
   const franchise = new Franchise();
 
   context("User views and applies for franchise on Franchise page", () => {
-
     beforeEach(() => {
       franchise.visit();
     });
@@ -76,7 +75,7 @@ describe("Pokeworks Own a Franchise Page", () => {
 
   //negative scenarios
 
-  it("Leaving all fields on form blank and clicking Submit triggers error", () => {
+    it("Leaving all fields on form blank and clicking Submit triggers error", () => {
     cy.get("input").should("have.value", "Submit").click()
     franchise.getFormError().eq(0).should("contain", "The field is required.")
     franchise.getFormError().eq(1).should("contain", "The field is required.")
@@ -86,9 +85,9 @@ describe("Pokeworks Own a Franchise Page", () => {
     franchise.getFormError().eq(7).should("contain", "The field is required.")
     franchise.getFormError().eq(10).should("contain", "The field is required.")
     franchise.getTryAgainError().should("contain", "One or more fields have an error. Please check and try again.")
-  });
+    });
 
-  it("Populating email field with invalid email triggers error", () => {
+    it("Populating email field with invalid email triggers error", () => {
     franchise.getFranchiseFormDetails().eq(0).click().type("Jane");
     franchise.getFranchiseFormDetails().eq(1).click().type("Doe");
     franchise.getFranchiseFormDetails().eq(2).click().type("333-333-3333");
@@ -110,6 +109,6 @@ describe("Pokeworks Own a Franchise Page", () => {
       cy.get("input").should("have.value", "Submit").click();
       franchise.getFormError().eq(3).should("contain", "The e-mail address entered is invalid.");
       franchise.getTryAgainError().should("contain", "One or more fields have an error. Please check and try again.")
+      });
     });
   });
-});
