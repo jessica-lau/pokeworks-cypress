@@ -56,15 +56,15 @@ class Footer {
   }
 
   getPress() {
-    return cy.get(this.footerItemListTwo).eq(6);
+    return cy.get(this.footerItemListOne).eq(6);
   }
 
   getFaqs() {
-    return cy.get(this.footerItemListTwo).eq(7);
+    return cy.get(this.footerItemListOne).eq(7);
   }
 
   getContact() {
-    return cy.get(this.footerItemListTwo).eq(8);
+    return cy.get(this.footerItemListOne).eq(8);
   }
 
   getCatering() {
