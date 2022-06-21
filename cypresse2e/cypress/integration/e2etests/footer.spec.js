@@ -66,9 +66,7 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Press link is visible and clickable", () => {
-      cy.get('a[href="https://pokeworks.com/press/"]')
-        .should("be.visible")
-        .click();
+      cy.get('a[href="/press"]').should("be.visible").click();
       cy.url().should("include", "/press");
     });
 
