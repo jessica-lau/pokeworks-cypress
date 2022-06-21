@@ -35,6 +35,10 @@ class Footer {
     return cy.get(this.submitEmail);
   }
 
+  getJobs() {
+    return cy.get(this.footerItemListOne).eq(0);
+  }
+
   getFranchise() {
     return cy.get(this.footerItemListOne).eq(1);
   }
@@ -53,10 +57,6 @@ class Footer {
 
   getNutrition() {
     return cy.get(this.footerItemListOne).eq(5);
-  }
-
-  getPress() {
-    return cy.get(this.footerItemListOne).eq(6);
   }
 
   getFaqs() {
