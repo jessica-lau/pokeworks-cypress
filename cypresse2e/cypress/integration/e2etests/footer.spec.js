@@ -35,21 +35,6 @@ describe("Pokeworks footer section", () => {
       cy.url().should("include", "privacy-policy");
     });
 
-    it("Nutrition link is visible and clickable", () => {
-      footer.getNutrition().should("be.visible").click();
-      cy.url().should("include", "/nutrition");
-    });
-
-    it("Locations link is visible and clickable", () => {
-      footer.getLocations().should("be.visible").click();
-      cy.url().should("include", "/locations");
-    });
-
-    it("Own a Franchise link is visible and clickable", () => {
-      footer.getFranchise().should("be.visible").click();
-      cy.url().should("include", "/franchise-with-pokeworks");
-    });
-
     it("Jobs link is visible and clickable", () => {
       cy.get('a[href="https://pokeworks.com/jobs/"]')
         .should("be.visible")
@@ -57,9 +42,9 @@ describe("Pokeworks footer section", () => {
       cy.url().should("include", "/jobs");
     });
 
-    it("Rewards link is visible and clickable", () => {
-      footer.getRewards().should("be.visible").click();
-      cy.url().should("include", "/rewards");
+    it("Own a Franchise link is visible and clickable", () => {
+      footer.getFranchise().should("be.visible").click();
+      cy.url().should("include", "/franchise-with-pokeworks");
     });
 
     it("Our Story link is visible and clickable", () => {
@@ -67,9 +52,19 @@ describe("Pokeworks footer section", () => {
       cy.url().should("include", "/our-story");
     });
 
-    it("Catering link is visible and clickable", () => {
-      footer.getCatering().should("be.visible").click();
-      cy.url().should("include", "/catering");
+    it("Rewards link is visible and clickable", () => {
+      footer.getRewards().should("be.visible").click();
+      cy.url().should("include", "/rewards");
+    });
+
+    it("Locations link is visible and clickable", () => {
+      footer.getLocations().should("be.visible").click();
+      cy.url().should("include", "/locations");
+    });
+
+    it("Nutrition link is visible and clickable", () => {
+      footer.getNutrition().should("be.visible").click();
+      cy.url().should("include", "/nutrition");
     });
 
     it("Press link is visible and clickable", () => {
@@ -85,6 +80,11 @@ describe("Pokeworks footer section", () => {
     it("Contact Us link is visible and clickable", () => {
       footer.getContact().should("be.visible").click();
       cy.url().should("include", "/contact-us");
+    });
+
+    it("Catering link is visible and clickable", () => {
+      footer.getCatering().should("be.visible").click();
+      cy.url().should("include", "/catering");
     });
 
     it("Facebook social is visible and clickable", () => {
