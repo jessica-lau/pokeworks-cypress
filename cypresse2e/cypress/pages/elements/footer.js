@@ -35,44 +35,40 @@ class Footer {
     return cy.get(this.submitEmail);
   }
 
-  getNutrition() {
-    return cy.get(this.footerItemListOne).eq(0);
-  }
-
-  getLocations() {
+  getFranchise() {
     return cy.get(this.footerItemListOne).eq(1);
   }
 
-  getFranchise() {
+  getStory() {
     return cy.get(this.footerItemListOne).eq(2);
   }
 
-  getJobs() {
+  getRewards() {
     return cy.get(this.footerItemListOne).eq(3);
   }
 
-  getRewards() {
+  getLocations() {
     return cy.get(this.footerItemListOne).eq(4);
   }
 
-  getStory() {
-    return cy.get(this.footerItemListTwo).eq(0);
-  }
-
-  getCatering() {
-    return cy.get(this.footerItemListTwo).eq(1);
+  getNutrition() {
+    return cy.get(this.footerItemListOne).eq(5);
   }
 
   getPress() {
-    return cy.get(this.footerItemListTwo).eq(2);
+    return cy.get(this.footerItemListTwo).eq(6);
   }
 
   getFaqs() {
-    return cy.get(this.footerItemListTwo).eq(3);
+    return cy.get(this.footerItemListTwo).eq(7);
   }
 
   getContact() {
-    return cy.get(this.footerItemListTwo).eq(4);
+    return cy.get(this.footerItemListTwo).eq(8);
+  }
+
+  getCatering() {
+    return cy.get(this.footerItemListTwo);
   }
 
   getTermsOfUse() {
