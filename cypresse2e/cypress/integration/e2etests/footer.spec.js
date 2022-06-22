@@ -80,8 +80,38 @@ describe("Pokeworks footer section", () => {
       cy.url().should("include", "/contact-us");
     });
 
+    it("Catering Irvine link is visible and clickable", () => {
+      footer.getCatering().eq(0).should("be.visible").click();
+      cy.url().should("include", "/irvine-catering");
+    });
+
+    it("Catering Mountain View link is visible and clickable", () => {
+      footer.getCatering().eq(1).should("be.visible").click();
+      cy.url().should("include", "/mountain-view-catering");
+    });
+
+    it("Catering San Jose link is visible and clickable", () => {
+      footer.getCatering().eq(2).should("be.visible").click();
+      cy.url().should("include", "/riverview-san-jose-catering");
+    });
+
+    it("Catering San Francisco link is visible and clickable", () => {
+      footer.getCatering().eq(3).should("be.visible").click();
+      cy.url().should("include", "/san-francisco-catering");
+    });
+
+    it("Catering Bellevue link is visible and clickable", () => {
+      footer.getCatering().eq(4).should("be.visible").click();
+      cy.url().should("include", "/bellevue-catering");
+    });
+
+    it("Catering New York link is visible and clickable", () => {
+      footer.getCatering().eq(5).should("be.visible").click();
+      cy.url().should("include", "/NY");
+    });
+
     it("Catering link is visible and clickable", () => {
-      footer.getCatering().should("be.visible").click();
+      footer.getCatering().eq(6).should("be.visible").click();
       cy.url().should("include", "/catering");
     });
 
