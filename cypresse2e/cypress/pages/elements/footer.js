@@ -51,16 +51,12 @@ class Footer {
     return cy.get(this.footerItemListOne).eq(3);
   }
 
-  getLocations() {
+  getFaqs() {
     return cy.get(this.footerItemListOne).eq(4);
   }
 
-  getFaqs() {
-    return cy.get(this.footerItemListOne).eq(5);
-  }
-
   getContact() {
-    return cy.get(this.footerItemListOne).eq(6);
+    return cy.get(this.footerItemListOne).eq(5);
   }
 
   getCatering() {
@@ -73,6 +69,10 @@ class Footer {
 
   getNutrition() {
     return cy.get(this.footerItemListTwo).eq(3);
+  }
+
+  getLocations() {
+    return cy.get(this.footerItemListOne).eq(4);
   }
 
   getTermsOfUse() {
