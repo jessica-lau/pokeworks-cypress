@@ -47,7 +47,7 @@ class Footer {
     return cy.get(this.footerItemListOne).eq(2);
   }
 
-  getRewards() {
+  getPress() {
     return cy.get(this.footerItemListOne).eq(3);
   }
 
@@ -55,20 +55,24 @@ class Footer {
     return cy.get(this.footerItemListOne).eq(4);
   }
 
-  getNutrition() {
+  getFaqs() {
     return cy.get(this.footerItemListOne).eq(5);
   }
 
-  getFaqs() {
-    return cy.get(this.footerItemListOne).eq(7);
-  }
-
   getContact() {
-    return cy.get(this.footerItemListOne).eq(8);
+    return cy.get(this.footerItemListOne).eq(6);
   }
 
   getCatering() {
     return cy.get(this.footerItemListTwo);
+  }
+
+  getRewards() {
+    return cy.get(this.footerItemListTwo).eq(2);
+  }
+
+  getNutrition() {
+    return cy.get(this.footerItemListTwo).eq(3);
   }
 
   getTermsOfUse() {

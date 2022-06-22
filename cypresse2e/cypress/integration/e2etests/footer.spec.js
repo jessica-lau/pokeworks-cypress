@@ -50,23 +50,8 @@ describe("Pokeworks footer section", () => {
       cy.url().should("include", "/our-story");
     });
 
-    it("Rewards link is visible and clickable", () => {
-      footer.getRewards().should("be.visible").click();
-      cy.url().should("include", "/rewards");
-    });
-
-    it("Locations link is visible and clickable", () => {
-      footer.getLocations().should("be.visible").click();
-      cy.url().should("include", "/locations");
-    });
-
-    it("Nutrition link is visible and clickable", () => {
-      footer.getNutrition().should("be.visible").click();
-      cy.url().should("include", "/nutrition");
-    });
-
     it("Press link is visible and clickable", () => {
-      cy.get('a[href="/press"]').should("be.visible").click();
+      cy.getPress().should("be.visible").click();
       cy.url().should("include", "/press");
     });
 
@@ -80,39 +65,29 @@ describe("Pokeworks footer section", () => {
       cy.url().should("include", "/contact-us");
     });
 
-    it("Catering Irvine link is visible and clickable", () => {
-      footer.getCatering().eq(0).should("be.visible").click();
-      cy.url().should("include", "/irvine-catering");
-    });
-
-    it("Catering Mountain View link is visible and clickable", () => {
-      footer.getCatering().eq(1).should("be.visible").click();
-      cy.url().should("include", "/mountain-view-catering");
-    });
-
-    it("Catering San Jose link is visible and clickable", () => {
-      footer.getCatering().eq(2).should("be.visible").click();
-      cy.url().should("include", "/riverview-san-jose-catering");
-    });
-
-    it("Catering San Francisco link is visible and clickable", () => {
-      footer.getCatering().eq(3).should("be.visible").click();
-      cy.url().should("include", "/san-francisco-catering");
-    });
-
-    it("Catering Bellevue link is visible and clickable", () => {
-      footer.getCatering().eq(4).should("be.visible").click();
-      cy.url().should("include", "/bellevue-catering");
-    });
-
-    it("Catering New York link is visible and clickable", () => {
-      footer.getCatering().eq(5).should("be.visible").click();
-      cy.url().should("include", "/NY");
-    });
-
     it("Catering link is visible and clickable", () => {
-      footer.getCatering().eq(6).should("be.visible").click();
+      footer.getCatering().eq(0).should("be.visible").click();
       cy.url().should("include", "/catering");
+    });
+
+    it("EZ Cater link is visible and clickable", () => {
+      footer.getCatering().eq(1).should("be.visible").click();
+      cy.url().should("include", "/pvt");
+    });
+
+    it("Rewards link is visible and clickable", () => {
+      footer.getRewards().should("be.visible").click();
+      cy.url().should("include", "/rewards");
+    });
+
+    it("Nutrition link is visible and clickable", () => {
+      footer.getNutrition().should("be.visible").click();
+      cy.url().should("include", "/nutrition");
+    });
+
+    it("Locations link is visible and clickable", () => {
+      footer.getLocations().should("be.visible").click();
+      cy.url().should("include", "/locations");
     });
 
     it("Facebook social is visible and clickable", () => {
