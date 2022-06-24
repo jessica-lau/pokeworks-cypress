@@ -1,14 +1,5 @@
 class Header {
   logo = ".logo-desktop-wrapper";
-  navigationMenu = "#header-nav-list li";
-  accountAndOrder = ".account-n-order-wrapper a";
-
-  constructor() {}
-}
-
-export default Header;
-class Header {
-  logo = ".logo-desktop-wrapper";
   accountAndOrderButton = ".account-n-order-wrapper a";
   headerLinks = "#header-nav-list li";
 
