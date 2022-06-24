@@ -16,11 +16,15 @@ describe("Pokeworks Own a Franchise Page", () => {
     it("Pokeworks franchise background information is visible", () => {
       franchise
         .getFranchiseInfo()
-        .contains(
+        .should(
+          "contain",
           "Pokeworks is the nation’s largest and fastest growing poke franchise"
         )
-        .and("We continue to build on our segment leading poke franchise")
-        .and("corporate support");
+        .and(
+          "contain",
+          "We continue to build on our segment leading poke franchise"
+        )
+        .and("contain", "corporate support");
     });
 
     it("Form heading should be visible", () => {
