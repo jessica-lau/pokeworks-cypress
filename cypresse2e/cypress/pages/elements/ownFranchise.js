@@ -19,7 +19,7 @@ class Franchise {
   }
 
   getSlideImages() {
-    return cy.get(this.slideImage);
+    return cy.get(this.slideImages);
   }
 
   getFranchiseInfo() {
@@ -35,11 +35,11 @@ class Franchise {
   }
 
   getFormError() {
-    return cy.get(this.formErrorMessage)
+    return cy.get(this.formErrorMessage);
   }
 
   getTryAgainError() {
-    return cy.get(this.formErrorTryAgain)
+    return cy.get(this.formErrorTryAgain);
   }
 
   getDropdownOptions() {
