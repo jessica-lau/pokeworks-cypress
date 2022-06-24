@@ -70,7 +70,7 @@ describe("Pokeworks footer section", () => {
       cy.url().should("include", "/catering");
     });
 
-    it("EZ Cater link is visible and clickable", () => {
+    it("EZCater link is visible and clickable", () => {
       footer.getCatering().eq(1).should("be.visible").click();
       cy.url().should("include", "/pvt");
     });
