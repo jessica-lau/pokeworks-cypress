@@ -44,10 +44,13 @@ describe("Pokeworks Own a Franchise Page", () => {
         .type(emailAndPassword.validEmail);
       franchise.getFranchiseFormDetails().eq(4).click().type("NY");
       franchise.getFranchiseFormDetails().eq(5).click().type("01000");
-      franchise.getDropdownOptions().eq(0).click().eq(1).click();
+      franchise.getDropdownOptions().eq(0).click();
+      franchise.getDropdownOptions().eq(1).click();
       franchise.getFranchiseFormDetails().eq(7).click().type("US");
-      franchise.getDropdownOptions.eq(1).click().eq(3).click();
-      franchise.getDropdownOptions().eq(2).click().eq(2).click();
+      franchise.getDropdownOptions().eq(1).click();
+      franchise.getDropdownOptions().eq(3).click();
+      franchise.getDropdownOptions().eq(2).click();
+      franchise.getDropdownOptions().eq(2).click();
       franchise
         .getFranchiseExperience()
         .click()
@@ -76,7 +79,7 @@ describe("Pokeworks Own a Franchise Page", () => {
 
     it("Privacy Policy link on the Franchise page is visible and clickable", () => {
       franchise.getPrivacyPolicy().should("be.visible").click();
-      cy.url().includes("privacy-policy");
+      cy.url().should("include", "privacy-policy");
     });
 
     //negative scenarios
