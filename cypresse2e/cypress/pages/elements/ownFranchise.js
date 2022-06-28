@@ -2,7 +2,7 @@ class Franchise {
   slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
   franchiseFormHeading = ".form > p";
-  franchiseFormDetails = "form > p > input";
+  franchiseFormDetails = "form > p";
   formErrorMessage = ".form > div > form > p > label > span > span";
   formErrorTryAgain = ".form > div > form > p > div";
   franchiseFormDropdown = ".form > div > form > p > select > option";
