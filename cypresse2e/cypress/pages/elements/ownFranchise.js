@@ -5,6 +5,9 @@ class Franchise {
   franchiseInfo = ".card-menu-list > ul > li";
   videoHeader = ".video-testimonials-inner > h2";
   videoSubHeader = ".section-description";
+  video = "#player";
+  swipeButtonLEft = ".swiper-button-prev";
+  swipeButtonRight = ".swiper-button-next";
 
   slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
