@@ -1,4 +1,8 @@
 class Franchise {
+  topBanner = ".page-title";
+  formHeader = ".contact-form-part-inner h2";
+  formSubHeader = ".contact-form-description";
+
   slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
   franchiseFormHeading = ".form > p";
