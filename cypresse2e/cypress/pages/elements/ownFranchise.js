@@ -1,7 +1,10 @@
 class Franchise {
   topBanner = ".page-title";
-  formHeader = ".contact-form-part-inner h2";
+  formHeader = ".contact-form-part-inner > h2";
   formSubHeader = ".contact-form-description";
+  franchiseInfo = ".card-menu-list > ul > li";
+  videoHeader = ".video-testimonials-inner > h2";
+  videoSubHeader = ".section-description";
 
   slideImages = ".alpine-slider";
   franchiseInfo = ".left-side-content";
