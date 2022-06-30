@@ -6,7 +6,7 @@ class Franchise {
   videoHeader = ".video-testimonials-inner > h2";
   videoSubHeader = ".section-description";
   video = "#player";
-  swipeButtonLEft = ".swiper-button-prev";
+  swipeButtonLeft = ".swiper-button-prev";
   swipeButtonRight = ".swiper-button-next";
 
   slideImages = ".alpine-slider";
