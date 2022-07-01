@@ -9,149 +9,153 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise.visit();
     });
 
-    it("Slide images on Franchise page are visible", () => {
-      franchise.getSlideImages().should("be.visible");
+    it("Top banner on Franchise page is visible", () => {
+      franchise.getTopBanner().should("be.visible");
     });
 
-    it("Pokeworks franchise background information is visible", () => {
-      franchise
-        .getFranchiseInfo()
-        .should(
-          "contain",
-          "Pokeworks is the nation’s largest and fastest growing poke franchise"
-        )
-        .and(
-          "contain",
-          "We continue to build on our segment leading poke franchise"
-        )
-        .and("contain", "corporate support");
-    });
+    // it("Slide images on Franchise page are visible", () => {
+    //   franchise.getSlideImages().should("be.visible");
+    // });
 
-    it("Form heading should be visible", () => {
-      franchise
-        .getFranchiseFormHeading()
-        .contains("multi-unit franchise owners");
-    });
+    // it("Pokeworks franchise background information is visible", () => {
+    //   franchise
+    //     .getFranchiseInfo()
+    //     .should(
+    //       "contain",
+    //       "Pokeworks is the nation’s largest and fastest growing poke franchise"
+    //     )
+    //     .and(
+    //       "contain",
+    //       "We continue to build on our segment leading poke franchise"
+    //     )
+    //     .and("contain", "corporate support");
+    // });
 
-    it("User fills out form with details", () => {
-      franchise.getFranchiseFormDetails().eq(0).click().type("Jane");
-      franchise.getFranchiseFormDetails().eq(1).click().type("Doe");
-      franchise.getFranchiseFormDetails().eq(2).click().type("333-333-3333");
-      franchise
-        .getFranchiseFormDetails()
-        .eq(3)
-        .click()
-        .type(emailAndPassword.validEmail);
-      franchise.getFranchiseFormDetails().eq(4).click().type("NY");
-      franchise.getFranchiseFormDetails().eq(5).click().type("01000");
-      franchise.getDropdownOptions().eq(0).click();
-      franchise.getDropdownOptions().eq(1).click();
-      franchise.getFranchiseFormDetails().eq(7).click().type("US");
-      franchise.getDropdownOptions().eq(1).click();
-      franchise.getDropdownOptions().eq(3).click();
-      franchise.getDropdownOptions().eq(2).click();
-      franchise.getDropdownOptions().eq(2).click();
-      franchise
-        .getFranchiseExperience()
-        .click()
-        .type("Opened local pizza shop in lower Manhattan for 5 years.");
-    });
+    // it("Form heading should be visible", () => {
+    //   franchise
+    //     .getFranchiseFormHeading()
+    //     .contains("multi-unit franchise owners");
+    // });
 
-    it("Form Submit button is visible and clickable", () => {
-      cy.get("input").should("have.value", "Submit").click();
-    });
+    // it("User fills out form with details", () => {
+    //   franchise.getFranchiseFormDetails().eq(0).click().type("Jane");
+    //   franchise.getFranchiseFormDetails().eq(1).click().type("Doe");
+    //   franchise.getFranchiseFormDetails().eq(2).click().type("333-333-3333");
+    //   franchise
+    //     .getFranchiseFormDetails()
+    //     .eq(3)
+    //     .click()
+    //     .type(emailAndPassword.validEmail);
+    //   franchise.getFranchiseFormDetails().eq(4).click().type("NY");
+    //   franchise.getFranchiseFormDetails().eq(5).click().type("01000");
+    //   franchise.getDropdownOptions().eq(0).click();
+    //   franchise.getDropdownOptions().eq(1).click();
+    //   franchise.getFranchiseFormDetails().eq(7).click().type("US");
+    //   franchise.getDropdownOptions().eq(1).click();
+    //   franchise.getDropdownOptions().eq(3).click();
+    //   franchise.getDropdownOptions().eq(2).click();
+    //   franchise.getDropdownOptions().eq(2).click();
+    //   franchise
+    //     .getFranchiseExperience()
+    //     .click()
+    //     .type("Opened local pizza shop in lower Manhattan for 5 years.");
+    // });
 
-    it("Video on Franchise page is visible and playable", () => {
-      franchise.getYoutubeVideo().should("be.visible").dblclick();
-    });
+    // it("Form Submit button is visible and clickable", () => {
+    //   cy.get("input").should("have.value", "Submit").click();
+    // });
 
-    it("Images on Franchise page are visible", () => {
-      franchise.getPokeWorksImages().eq(0).should("be.visible");
-      franchise.getPokeWorksImages().eq(1).should("be.visible");
-      franchise.getPokeWorksImages().eq(2).should("be.visible");
-    });
+    // it("Video on Franchise page is visible and playable", () => {
+    //   franchise.getYoutubeVideo().should("be.visible").dblclick();
+    // });
 
-    it("Social media icons on Franchise page are visible and clickable", () => {
-      franchise.getSocialMedia().eq(0).should("be.visible").click();
-      franchise.getSocialMedia().eq(1).should("be.visible").click();
-      franchise.getSocialMedia().eq(2).should("be.visible").click();
-    });
+    // it("Images on Franchise page are visible", () => {
+    //   franchise.getPokeWorksImages().eq(0).should("be.visible");
+    //   franchise.getPokeWorksImages().eq(1).should("be.visible");
+    //   franchise.getPokeWorksImages().eq(2).should("be.visible");
+    // });
 
-    it("Privacy Policy link on the Franchise page is visible and clickable", () => {
-      franchise.getPrivacyPolicy().should("be.visible").click();
-      cy.url().should("include", "privacy-policy");
-    });
+    // it("Social media icons on Franchise page are visible and clickable", () => {
+    //   franchise.getSocialMedia().eq(0).should("be.visible").click();
+    //   franchise.getSocialMedia().eq(1).should("be.visible").click();
+    //   franchise.getSocialMedia().eq(2).should("be.visible").click();
+    // });
 
-    //negative scenarios
+    // it("Privacy Policy link on the Franchise page is visible and clickable", () => {
+    //   franchise.getPrivacyPolicy().should("be.visible").click();
+    //   cy.url().should("include", "privacy-policy");
+    // });
 
-    it("Leaving all fields on form blank and clicking Submit triggers error", () => {
-      cy.get("input").should("have.value", "Submit").click();
-      franchise
-        .getFormError()
-        .eq(0)
-        .should("contain", "The field is required.");
-      franchise
-        .getFormError()
-        .eq(1)
-        .should("contain", "The field is required.");
-      franchise
-        .getFormError()
-        .eq(3)
-        .should("contain", "The field is required.");
-      franchise
-        .getFormError()
-        .eq(4)
-        .should("contain", "The field is required.");
-      franchise
-        .getFormError()
-        .eq(5)
-        .should("contain", "The field is required.");
-      franchise
-        .getFormError()
-        .eq(7)
-        .should("contain", "The field is required.");
-      franchise
-        .getFormError()
-        .eq(10)
-        .should("contain", "The field is required.");
-      franchise
-        .getTryAgainError()
-        .should(
-          "contain",
-          "One or more fields have an error. Please check and try again."
-        );
-    });
+    // //negative scenarios
 
-    it("Populating email field with invalid email triggers error", () => {
-      franchise.getFranchiseFormDetails().eq(0).click().type("Jane");
-      franchise.getFranchiseFormDetails().eq(1).click().type("Doe");
-      franchise.getFranchiseFormDetails().eq(2).click().type("333-333-3333");
-      franchise
-        .getFranchiseFormDetails()
-        .eq(3)
-        .click()
-        .type(emailAndPassword.invalidEmail);
-      franchise.getFranchiseFormDetails().eq(4).click().type("NY");
-      franchise.getFranchiseFormDetails().eq(5).click().type("01000");
-      franchise.getDropdownOptions().eq(0).click().eq(1).click();
-      franchise.getFranchiseFormDetails().eq(7).click().type("US");
-      franchise.getDropdownOptions.eq(1).click().eq(3).click();
-      franchise.getDropdownOptions().eq(2).click().eq(2).click();
-      franchise
-        .getFranchiseExperience()
-        .click()
-        .type("Opened local pizza shop in lower Manhattan for 5 years.");
-      cy.get("input").should("have.value", "Submit").click();
-      franchise
-        .getFormError()
-        .eq(3)
-        .should("contain", "The e-mail address entered is invalid.");
-      franchise
-        .getTryAgainError()
-        .should(
-          "contain",
-          "One or more fields have an error. Please check and try again."
-        );
-    });
+    // it("Leaving all fields on form blank and clicking Submit triggers error", () => {
+    //   cy.get("input").should("have.value", "Submit").click();
+    //   franchise
+    //     .getFormError()
+    //     .eq(0)
+    //     .should("contain", "The field is required.");
+    //   franchise
+    //     .getFormError()
+    //     .eq(1)
+    //     .should("contain", "The field is required.");
+    //   franchise
+    //     .getFormError()
+    //     .eq(3)
+    //     .should("contain", "The field is required.");
+    //   franchise
+    //     .getFormError()
+    //     .eq(4)
+    //     .should("contain", "The field is required.");
+    //   franchise
+    //     .getFormError()
+    //     .eq(5)
+    //     .should("contain", "The field is required.");
+    //   franchise
+    //     .getFormError()
+    //     .eq(7)
+    //     .should("contain", "The field is required.");
+    //   franchise
+    //     .getFormError()
+    //     .eq(10)
+    //     .should("contain", "The field is required.");
+    //   franchise
+    //     .getTryAgainError()
+    //     .should(
+    //       "contain",
+    //       "One or more fields have an error. Please check and try again."
+    //     );
+    // });
+
+    // it("Populating email field with invalid email triggers error", () => {
+    //   franchise.getFranchiseFormDetails().eq(0).click().type("Jane");
+    //   franchise.getFranchiseFormDetails().eq(1).click().type("Doe");
+    //   franchise.getFranchiseFormDetails().eq(2).click().type("333-333-3333");
+    //   franchise
+    //     .getFranchiseFormDetails()
+    //     .eq(3)
+    //     .click()
+    //     .type(emailAndPassword.invalidEmail);
+    //   franchise.getFranchiseFormDetails().eq(4).click().type("NY");
+    //   franchise.getFranchiseFormDetails().eq(5).click().type("01000");
+    //   franchise.getDropdownOptions().eq(0).click().eq(1).click();
+    //   franchise.getFranchiseFormDetails().eq(7).click().type("US");
+    //   franchise.getDropdownOptions.eq(1).click().eq(3).click();
+    //   franchise.getDropdownOptions().eq(2).click().eq(2).click();
+    //   franchise
+    //     .getFranchiseExperience()
+    //     .click()
+    //     .type("Opened local pizza shop in lower Manhattan for 5 years.");
+    //   cy.get("input").should("have.value", "Submit").click();
+    //   franchise
+    //     .getFormError()
+    //     .eq(3)
+    //     .should("contain", "The e-mail address entered is invalid.");
+    //   franchise
+    //     .getTryAgainError()
+    //     .should(
+    //       "contain",
+    //       "One or more fields have an error. Please check and try again."
+    //     );
+    // });
   });
 });
