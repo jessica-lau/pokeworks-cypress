@@ -13,6 +13,13 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise.getTopBanner().should("be.visible");
     });
 
+    it("Form header is visible", () => {
+      franchise
+        .getFormHeader()
+        .should("be.visible")
+        .and("contain", "Pokeworks Franchising");
+    });
+
     // it("Slide images on Franchise page are visible", () => {
     //   franchise.getSlideImages().should("be.visible");
     // });
