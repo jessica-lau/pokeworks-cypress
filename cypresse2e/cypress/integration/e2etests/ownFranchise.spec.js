@@ -27,6 +27,25 @@ describe("Pokeworks Own a Franchise Page", () => {
         .and("contain", "franchise owners");
     });
 
+    it("Pokeworks info section one is visible", () => {
+      franchise
+        .getFranchiseInfo()
+        .eq(0)
+        .should("contain", "Premium fast casual");
+    });
+
+    it("Pokeworks info section two is visible", () => {
+      franchise.getFranchiseInfo().eq(1).should("contain", "Market share");
+    });
+
+    it("Pokeworks info section three is visible", () => {
+      franchise.getFranchiseInfo().eq(2).should("contain", "Exclusive");
+    });
+
+    it("Pokeworks info section four is visible", () => {
+      franchise.getFranchiseInfo().eq(3).should("contain", "Premium poke");
+    });
+
     // it("Slide images on Franchise page are visible", () => {
     //   franchise.getSlideImages().should("be.visible");
     // });
