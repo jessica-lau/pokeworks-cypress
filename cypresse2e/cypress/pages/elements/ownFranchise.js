@@ -3,6 +3,7 @@ class Franchise {
   formHeader = ".contact-form-part-inner > h2";
   formSubHeader = ".contact-form-description";
   franchiseInfo = ".card-menu-list > ul > li";
+  learnMore = ".content";
   videoHeader = ".video-testimonials-inner > h2";
   videoSubHeader = ".section-description";
   video = "#player";
@@ -42,6 +43,10 @@ class Franchise {
 
   getFranchiseInfo() {
     return cy.get(this.franchiseInfo);
+  }
+
+  getLearnMore() {
+    return cy.get(this.learnMore);
   }
 
   getVideoHeader() {
