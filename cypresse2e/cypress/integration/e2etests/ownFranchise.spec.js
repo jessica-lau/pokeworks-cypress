@@ -46,6 +46,26 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise.getFranchiseInfo().eq(3).should("contain", "Premium poke");
     });
 
+    it("Pokeworks info section one Learn More link is visible and clickable", () => {
+      franchise.getLearnMore().eq(0).should("be.visible").click();
+      cy.url().should("include", "why-pokeworks");
+    });
+
+    it("Pokeworks info section two Learn More link is visible and clickable", () => {
+      franchise.getLearnMore().eq(1).should("be.visible").click();
+      cy.url().should("include", "why-pokeworks");
+    });
+
+    it("Pokeworks info section three Learn More link is visible and clickable", () => {
+      franchise.getLearnMore().eq(2).should("be.visible").click();
+      cy.url().should("include", "available-territories");
+    });
+
+    it("Pokeworks info section four Learn More link is visible and clickable", () => {
+      franchise.getLearnMore().eq(3).should("be.visible").click();
+      cy.url().should("include", "about-us");
+    });
+
     // it("Slide images on Franchise page are visible", () => {
     //   franchise.getSlideImages().should("be.visible");
     // });

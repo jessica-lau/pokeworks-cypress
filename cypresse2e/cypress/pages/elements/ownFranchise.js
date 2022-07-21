@@ -3,7 +3,7 @@ class Franchise {
   formHeader = ".contact-form-part-inner > h2";
   formSubHeader = ".contact-form-description";
   franchiseInfo = ".card-menu-list > ul > li";
-  learnMore = ".content";
+  learnMore = ".content > a";
   videoHeader = ".video-testimonials-inner > h2";
   videoSubHeader = ".section-description";
   video = "#player";
