@@ -42,7 +42,7 @@ describe("Pokeworks footer section", () => {
 
     it("Own a Franchise link is visible and clickable", () => {
       footer.getFranchise().should("be.visible").click();
-      cy.url().should("include", "/franchise-with-pokeworks");
+      cy.url().should("include", "pokeworksfranchise");
     });
 
     it("Our Story link is visible and clickable", () => {
@@ -51,7 +51,7 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Press link is visible and clickable", () => {
-      cy.getPress().should("be.visible").click();
+      footer.getPress().should("be.visible").click();
       cy.url().should("include", "/press");
     });
 
