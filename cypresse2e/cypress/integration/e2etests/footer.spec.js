@@ -51,7 +51,7 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Press link is visible and clickable", () => {
-      footer.getPress().should("be.visible").click();
+      cy.get('a[href="/press"]').should("be.visible").click();
       cy.url().should("include", "/press");
     });
 
@@ -66,27 +66,37 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Catering link is visible and clickable", () => {
-      footer.getCatering().eq(0).should("be.visible").click();
+      cy.get('a[href="https://pokeworks.com/catering/"]')
+        .should("be.visible")
+        .click();
       cy.url().should("include", "/catering");
     });
 
     it("EZCater link is visible and clickable", () => {
-      footer.getCatering().eq(1).should("be.visible").click();
+      cy.get('a[href="https://www.ezcater.com/brand/pvt/pokeworks"]')
+        .should("be.visible")
+        .click();
       cy.url().should("include", "/pvt");
     });
 
     it("Rewards link is visible and clickable", () => {
-      footer.getRewards().should("be.visible").click();
+      cy.get('a[href="https://pokeworks.com/rewards/"]')
+        .should("be.visible")
+        .click();
       cy.url().should("include", "/rewards");
     });
 
     it("Nutrition link is visible and clickable", () => {
-      footer.getNutrition().should("be.visible").click();
+      cy.get('a[href="https://pokeworks.com/nutrition/"]')
+        .should("be.visible")
+        .click();
       cy.url().should("include", "/nutrition");
     });
 
     it("Locations link is visible and clickable", () => {
-      footer.getLocations().should("be.visible").click();
+      cy.get('a[href="https://pokeworks.com/locations/"]')
+        .should("be.visible")
+        .click();
       cy.url().should("include", "/locations");
     });
 
