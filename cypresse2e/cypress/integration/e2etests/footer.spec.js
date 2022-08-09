@@ -61,22 +61,17 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Contact Us link is visible and clickable", () => {
-      footer.getContact().should("be.visible").click();
+      cy.get('a[href="/contact-us"]').should("be.visible").click();
       cy.url().should("include", "/contact-us");
     });
 
     it("Catering link is visible and clickable", () => {
-      cy.get('a[href="https://pokeworks.com/catering/"]')
-        .should("be.visible")
-        .click();
+      footer.getCatering().should("be.visible").click();
       cy.url().should("include", "/catering");
     });
 
     it("EZCater link is visible and clickable", () => {
-      cy.get('a[href="https://www.ezcater.com/brand/pvt/pokeworks"]')
-        .should("be.visible")
-        .click();
-      cy.url().should("include", "/pvt");
+      footer.getEzCater().contains("a", "ezCater").click();
     });
 
     it("Rewards link is visible and clickable", () => {
@@ -94,10 +89,7 @@ describe("Pokeworks footer section", () => {
     });
 
     it("Locations link is visible and clickable", () => {
-      cy.get('a[href="https://pokeworks.com/locations/"]')
-        .should("be.visible")
-        .click();
-      cy.url().should("include", "/locations");
+      footer.getLocations().contains("a", "Locations").click();
     });
 
     it("Facebook social is visible and clickable", () => {

@@ -60,7 +60,11 @@ class Footer {
   }
 
   getCatering() {
-    return cy.get(this.footerItemListTwo);
+    return cy.get(this.footerItemListTwo).eq(0);
+  }
+
+  getEzCater() {
+    return cy.get(this.footerItemListTwo).eq(1);
   }
 
   getRewards() {
@@ -72,7 +76,7 @@ class Footer {
   }
 
   getLocations() {
-    return cy.get(this.footerItemListOne).eq(4);
+    return cy.get(this.footerItemListTwo).eq(4);
   }
 
   getTermsOfUse() {
