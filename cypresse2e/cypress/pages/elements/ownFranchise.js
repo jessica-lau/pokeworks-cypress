@@ -26,7 +26,7 @@ class Franchise {
   constructor() {}
 
   visit() {
-    cy.visit("franchise-with-pokeworks/");
+    cy.visit("https://pokeworksfranchise.com/");
   }
 
   getTopBanner() {
