@@ -17,7 +17,7 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise
         .getFormHeader()
         .should("be.visible")
-        .and("contain", "Pokeworks Franchising");
+        .and("contain", "POKEWORKS FRANCHISING");
     });
 
     it("Form subheader is visible", () => {
