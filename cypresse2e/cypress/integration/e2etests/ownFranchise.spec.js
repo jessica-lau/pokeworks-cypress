@@ -35,15 +35,15 @@ describe("Pokeworks Own a Franchise Page", () => {
     });
 
     it("Pokeworks info section two is visible", () => {
-      franchise.getFranchiseInfo().eq(1).should("contain", "Market share");
+      franchise.getFranchiseInfo().eq(1).should("contain", "MARKET SHARE");
     });
 
     it("Pokeworks info section three is visible", () => {
-      franchise.getFranchiseInfo().eq(2).should("contain", "Exclusive");
+      franchise.getFranchiseInfo().eq(2).should("contain", "EXCLUSIVE");
     });
 
     it("Pokeworks info section four is visible", () => {
-      franchise.getFranchiseInfo().eq(3).should("contain", "Premium poke");
+      franchise.getFranchiseInfo().eq(3).should("contain", "PREMIUM POKE");
     });
 
     it("Pokeworks info section one Learn More link is visible and clickable", () => {
