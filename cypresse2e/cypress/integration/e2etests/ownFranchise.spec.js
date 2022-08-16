@@ -66,6 +66,16 @@ describe("Pokeworks Own a Franchise Page", () => {
       cy.url().should("include", "about-us");
     });
 
+    it("Video header is visible", () => {
+      franchise.getVideoHeader().should("contain", "MEET OUR POKE PEOPLE");
+    });
+
+    it("Video subheader is visible", () => {
+      franchise
+        .getVideoSubHeader()
+        .should("contain", "serving their communities");
+    });
+
     // it("Slide images on Franchise page are visible", () => {
     //   franchise.getSlideImages().should("be.visible");
     // });
