@@ -31,7 +31,7 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise
         .getFranchiseInfo()
         .eq(0)
-        .should("contain", "Premium fast casual");
+        .should("contain", "PREMIUM FAST CASUAL");
     });
 
     it("Pokeworks info section two is visible", () => {

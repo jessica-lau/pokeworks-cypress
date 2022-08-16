@@ -2,7 +2,7 @@ class Franchise {
   topBanner = ".page-title";
   formHeader = ".contact-form-part-inner > h2";
   formSubHeader = ".contact-form-description";
-  franchiseInfo = ".card-menu-list > ul > li";
+  franchiseInfo = ".card-menu-list > li";
   learnMore = ".content > a";
   videoHeader = ".video-testimonials-inner > h2";
   videoSubHeader = ".section-description";
