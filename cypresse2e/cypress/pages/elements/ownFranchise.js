@@ -6,7 +6,7 @@ class Franchise {
   learnMore = ".content > a";
   videoHeader = ".video-testimonials-inner > h2";
   videoSubHeader = ".section-description";
-  video = "#player";
+  video = "iframe";
   swipeButtonLeft = ".swiper-button-prev";
   swipeButtonRight = ".swiper-button-next";
 

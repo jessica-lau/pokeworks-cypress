@@ -76,6 +76,10 @@ describe("Pokeworks Own a Franchise Page", () => {
         .should("contain", "serving their communities");
     });
 
+    it("Video player is visible", () => {
+      franchise.getVideo().should("be.visible");
+    });
+
     // it("Slide images on Franchise page are visible", () => {
     //   franchise.getSlideImages().should("be.visible");
     // });
