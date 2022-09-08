@@ -80,6 +80,11 @@ describe("Pokeworks Own a Franchise Page", () => {
       franchise.getVideo().should("be.visible");
     });
 
+    it("Video right and left swipe buttons are visible and clickable", () => {
+      franchise.getSwipeLeft().should("be.visible").click();
+      franchise.getSwipeRight().should("be.visible").click();
+    });
+
     // it("Slide images on Franchise page are visible", () => {
     //   franchise.getSlideImages().should("be.visible");
     // });
