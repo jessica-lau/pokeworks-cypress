@@ -1,5 +1,5 @@
 class WhyPokeworks {
-  subNavigation = ".secondary_nav";
+  subNavigation = ".secondary_nav > ul > li";
   pokeworksHeading = "h1";
   sectionHeading = "h2";
   sectionDescription = ".section-description";
@@ -15,6 +15,14 @@ class WhyPokeworks {
 
   visit() {
     cy.visit("/why-pokeworks/");
+  }
+
+  getsubNavigation() {
+    return cy.get(this.subNavigation);
+  }
+
+  pokeworksHeading() {
+    return cy.get(this.pokeworksHeading);
   }
 }
 
