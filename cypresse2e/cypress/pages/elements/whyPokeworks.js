@@ -9,6 +9,7 @@ class WhyPokeworks {
   netWorthDropdown = "p > label > span > select";
   experienceRestaurant = "#experience-restaurant";
   experienceFranchise = "#experience-franchise";
+  submitButton = 'input[type="submit"]';
 
   constructor() {}
 
