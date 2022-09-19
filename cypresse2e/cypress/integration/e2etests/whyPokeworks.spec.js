@@ -32,4 +32,8 @@ describe("Why Pokeworks page", () => {
   it("Sixth subnavigation is visible and clickable", () => {
     whyPokeworks.getsubNavigation().eq(5).should("be.visible").click();
   });
+
+  it("'Why Pokeworks' heading is visible", () => {
+    whyPokeworks.getPokeworksHeading().should("contain", "WHY POKEWORKS");
+  });
 });
