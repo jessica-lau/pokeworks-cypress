@@ -21,8 +21,44 @@ class WhyPokeworks {
     return cy.get(this.subNavigation);
   }
 
-  pokeworksHeading() {
+  getPokeworksHeading() {
     return cy.get(this.pokeworksHeading);
+  }
+
+  getSectionHeading() {
+    return cy.get(this.sectionHeading);
+  }
+
+  getSectionDescription() {
+    return cy.get(this.sectionDescription);
+  }
+
+  getSectionBtn() {
+    return cy.get(this.sectionButton);
+  }
+
+  getContactFormDescrp() {
+    return cy.get(this.contactFormDescription);
+  }
+
+  getContactFormField() {
+    return cy.get(this.contactFormField);
+  }
+
+  getNetWorthDropdown() {
+    return cy.get(this.netWorthDropdown);
+  }
+
+  getExperienceRestaurant() {
+    return cy.get(this.experienceRestaurant);
+  }
+
+  getExperienceFranchise() {
+    return cy.get(this.experienceFranchise);
+  }
+
+  getSubmitBtn() {
+    return cy.get(this.submitButton);
   }
 }
 
