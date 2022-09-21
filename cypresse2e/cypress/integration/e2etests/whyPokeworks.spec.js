@@ -51,4 +51,19 @@ describe("Why Pokeworks page", () => {
   it("Section one 'Let's Take The Next Step' button is visible and clickable", () => {
     whyPokeworks.getSectionBtn().eq(0).should("be.visible").click();
   });
+
+  it("Section two heading of Why Pokeworks is visible", () => {
+    whyPokeworks.getSectionHeading().eq(1).should("contain", "COST CONSCIOUS");
+  });
+
+  it("Section two description of Wny Pokeworks is visible", () => {
+    whyPokeworks
+      .getSectionDescription()
+      .eq(1)
+      .should("contain", "efficiency and operational speed.");
+  });
+
+  it("Section two 'Schedule a Call to Learn More' button is visible and clickable", () => {
+    whyPokeworks.getSectionBtn().eq(1).should("be.visible").click();
+  });
 });
