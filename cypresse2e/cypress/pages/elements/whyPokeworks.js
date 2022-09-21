@@ -14,7 +14,7 @@ class WhyPokeworks {
   constructor() {}
 
   visit() {
-    cy.visit("/why-pokeworks/");
+    cy.visit("https://pokeworksfranchise.com/why-pokeworks/");
   }
 
   getsubNavigation() {
