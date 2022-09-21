@@ -47,4 +47,8 @@ describe("Why Pokeworks page", () => {
       .eq(0)
       .should("contain", "Pokeworks is built to scale with system");
   });
+
+  it("Section one 'Let's Take The Next Step' button is visible and clickable", () => {
+    whyPokeworks.getSectionBtn().eq(0).should("be.visible").click();
+  });
 });
