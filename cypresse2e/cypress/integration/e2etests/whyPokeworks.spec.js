@@ -66,4 +66,22 @@ describe("Why Pokeworks page", () => {
   it("Section two 'Schedule a Call to Learn More' button is visible and clickable", () => {
     whyPokeworks.getSectionBtn().eq(1).should("be.visible").click();
   });
+
+  it("Section three heading of Why Pokeworks is visible", () => {
+    whyPokeworks.getSectionHeading().eq(2).should("contain", "OPERATIONAL");
+  });
+
+  it("Section three description of Wny Pokeworks is visible", () => {
+    whyPokeworks
+      .getSectionDescription()
+      .eq(2)
+      .should(
+        "contain",
+        "provides you with the brand, industry, operational and opening knowledge needed to maximize your effectiveness."
+      );
+  });
+
+  it("Section three 'Ready for Next Steps' button is visible and clickable", () => {
+    whyPokeworks.getSectionBtn().eq(2).should("be.visible").click();
+  });
 });
