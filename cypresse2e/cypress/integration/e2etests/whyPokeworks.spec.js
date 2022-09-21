@@ -36,4 +36,15 @@ describe("Why Pokeworks page", () => {
   it("'Why Pokeworks' heading is visible", () => {
     whyPokeworks.getPokeworksHeading().should("contain", "WHY POKEWORKS");
   });
+
+  it("Section one heading of Why Pokeworks is visible", () => {
+    whyPokeworks.getSectionHeading().eq(0).should("contain", "AUV-TOP");
+  });
+
+  it("Section one description of Wny Pokeworks is visible", () => {
+    whyPokeworks
+      .getSectionDescription()
+      .eq(0)
+      .should("contain", "Pokeworks is built to scale with system");
+  });
 });
