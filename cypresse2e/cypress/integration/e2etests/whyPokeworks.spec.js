@@ -102,4 +102,22 @@ describe("Why Pokeworks page", () => {
   it("Section four 'Lets Talk' button is visible and clickable", () => {
     whyPokeworks.getSectionBtn().eq(3).should("be.visible").click();
   });
+
+  it("Section five heading of Why Pokeworks is visible", () => {
+    whyPokeworks.getSectionHeading().eq(4).should("contain", "INNOVATION");
+  });
+
+  it("Section five description of Wny Pokeworks is visible", () => {
+    whyPokeworks
+      .getSectionDescription()
+      .eq(4)
+      .should(
+        "contain",
+        "We think of poke as a platform for creation with flexibility"
+      );
+  });
+
+  it("Section five 'Ready for Next Steps' button is visible and clickable", () => {
+    whyPokeworks.getSectionBtn().eq(4).should("be.visible").click();
+  });
 });
