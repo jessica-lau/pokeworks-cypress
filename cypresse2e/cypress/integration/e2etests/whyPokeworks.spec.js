@@ -120,4 +120,19 @@ describe("Why Pokeworks page", () => {
   it("Section five 'Ready for Next Steps' button is visible and clickable", () => {
     whyPokeworks.getSectionBtn().eq(4).should("be.visible").click();
   });
+
+  it("Section six heading of Why Pokeworks is visible", () => {
+    whyPokeworks.getSectionHeading().eq(5).should("contain", "OWNERSHIP");
+  });
+
+  it("Section six description of Wny Pokeworks is visible", () => {
+    whyPokeworks
+      .getSectionDescription()
+      .eq(5)
+      .should("contain", "How do I become a Pokeworks franchise?");
+  });
+
+  it("Section six 'Schedule a Call Today' button is visible and clickable", () => {
+    whyPokeworks.getSectionBtn().eq(5).should("be.visible").click();
+  });
 });
