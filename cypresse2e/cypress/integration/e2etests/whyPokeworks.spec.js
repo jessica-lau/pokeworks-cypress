@@ -135,4 +135,15 @@ describe("Why Pokeworks page", () => {
   it("Section six 'Schedule a Call Today' button is visible and clickable", () => {
     whyPokeworks.getSectionBtn().eq(5).should("be.visible").click();
   });
+
+  it("'Available Territories' heading is visible", () => {
+    whyPokeworks
+      .getPokeworksHeading()
+      .eq(1)
+      .should("contain", "AVAILABLE TERRITORIES");
+  });
+
+  it("'Available Territories' sub-description is visible", () => {
+    whyPokeworks.getSectionDescription().eq(6).should("contain", "500 Ranking");
+  });
 });
