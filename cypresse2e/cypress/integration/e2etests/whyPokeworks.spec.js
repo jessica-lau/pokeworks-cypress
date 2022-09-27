@@ -34,7 +34,7 @@ describe("Why Pokeworks page", () => {
   });
 
   it("'Why Pokeworks' heading is visible", () => {
-    whyPokeworks.getPokeworksHeading().should("contain", "WHY POKEWORKS");
+    whyPokeworks.getPokeworksHeading().eq(0).should("contain", "WHY POKEWORKS");
   });
 
   it("Section one heading of Why Pokeworks is visible", () => {
