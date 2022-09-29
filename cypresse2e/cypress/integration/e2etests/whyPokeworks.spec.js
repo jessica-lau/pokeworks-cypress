@@ -146,4 +146,8 @@ describe("Why Pokeworks page", () => {
   it("'Available Territories' sub-description is visible", () => {
     whyPokeworks.getSectionDescription().eq(6).should("contain", "500 Ranking");
   });
+
+  it("Pokeworks franchise form heading is visible", () => {
+    whyPokeworks.getSectionHeading().should("contain", "POKEWORKS FRANCHISING");
+  });
 });
