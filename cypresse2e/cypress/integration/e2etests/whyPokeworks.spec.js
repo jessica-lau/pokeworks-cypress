@@ -147,7 +147,13 @@ describe("Why Pokeworks page", () => {
     whyPokeworks.getSectionDescription().eq(6).should("contain", "500 Ranking");
   });
 
-  it("Pokeworks franchise form heading is visible", () => {
+  it("Pokeworks contact form heading and description are visible", () => {
     whyPokeworks.getSectionHeading().should("contain", "POKEWORKS FRANCHISING");
+    whyPokeworks
+      .getContactFormDescrp()
+      .should(
+        "contain",
+        "Join other highly accomplished multi-unit franchise owners today."
+      );
   });
 });
