@@ -156,4 +156,8 @@ describe("Why Pokeworks page", () => {
         "Join other highly accomplished multi-unit franchise owners today."
       );
   });
+
+  it("Contact form submit button is visible and clickable", () => {
+    whyPokeworks.getSubmitBtn().should("be.visible").click();
+  });
 });
