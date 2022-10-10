@@ -1,4 +1,5 @@
 import WhyPokeworks from "../../pages/elements/whyPokeworks";
+import inputValues from "../../fixtures/inputValues.json";
 
 describe("Why Pokeworks page", () => {
   const whyPokeworks = new WhyPokeworks();
@@ -160,7 +161,17 @@ describe("Why Pokeworks page", () => {
   it("First name field is visible and can be populated", () => {
     whyPokeworks
       .getContactFormField()
-      .should("have.attr", "name", "first-name");
+      .should("have.attr", "name", "first-name")
+      .click()
+      .type(inputValues.firstName);
+  });
+
+  it("Last name field is visible and can be populated", () => {
+    whyPokeworks
+      .getContactFormField()
+      .should("have.attr", "name", "last-name")
+      .click()
+      .type(inputValues.lastName);
   });
 
   it("Contact form submit button is visible and clickable", () => {
