@@ -157,6 +157,12 @@ describe("Why Pokeworks page", () => {
       );
   });
 
+  it("First name field is visible and can be populated", () => {
+    whyPokeworks
+      .getContactFormField()
+      .should("have.attr", "name", "first-name");
+  });
+
   it("Contact form submit button is visible and clickable", () => {
     whyPokeworks.getSubmitBtn().should("be.visible").click();
   });
