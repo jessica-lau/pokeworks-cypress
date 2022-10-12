@@ -183,6 +183,14 @@ describe("Why Pokeworks page", () => {
       .type(emailAndPassword.validEmail);
   });
 
+  it("Telephone field is visible and can be populated", () => {
+    whyPokeworks
+      .getContactFormField()
+      .should("have.attr", "name", "phone")
+      .click()
+      .type(inputValues.phone);
+  });
+
   it("Contact form submit button is visible and clickable", () => {
     whyPokeworks.getSubmitBtn().should("be.visible").click();
   });
