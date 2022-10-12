@@ -188,7 +188,15 @@ describe("Why Pokeworks page", () => {
       .getContactFormField()
       .should("have.attr", "name", "phone")
       .click()
-      .type(inputValues.phone);
+      .type(inputValues.phoneNumber);
+  });
+
+  it("Area of Interest field is visible and can be populated", () => {
+    whyPokeworks
+      .getContactFormField()
+      .should("have.attr", "name", "area-of-interest")
+      .click()
+      .type("Business");
   });
 
   it("Contact form submit button is visible and clickable", () => {
