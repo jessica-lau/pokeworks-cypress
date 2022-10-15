@@ -199,6 +199,19 @@ describe("Why Pokeworks page", () => {
       .type("Business");
   });
 
+  it("Each option in the net worth dropdown can be selected", () => {
+    whyPokeworks.getNetWorthOption().click();
+    whyPokeworks.getNetWorthOption().eq(0).click();
+    whyPokeworks.getNetWorthOption().click();
+    whyPokeworks.getNetWorthOption().eq(1).click();
+    whyPokeworks.getNetWorthOption().click();
+    whyPokeworks.getNetWorthOption().eq(2).click();
+    whyPokeworks.getNetWorthOption().click();
+    whyPokeworks.getNetWorthOption().eq(3).click();
+    whyPokeworks.getNetWorthOption().click();
+    whyPokeworks.getNetWorthOption().eq(4).click();
+  });
+
   it("Contact form submit button is visible and clickable", () => {
     whyPokeworks.getSubmitBtn().should("be.visible").click();
   });
