@@ -6,7 +6,8 @@ class WhyPokeworks {
   sectionButton = ".btn-outlined btn-primary";
   contactFormDescription = ".contact-form-description";
   contactFormField = "p > label > span > input";
-  netWorthDropdown = "p > label > span > select";
+  netWorthDropdown = "estimated-net-worth";
+  netWorthOption = "p > label > span > select > option";
   experienceRestaurant = "#experience-restaurant";
   experienceFranchise = "#experience-franchise";
   submitButton = 'input[type="submit"]';
@@ -47,6 +48,10 @@ class WhyPokeworks {
 
   getNetWorthDropdown() {
     return cy.get(this.netWorthDropdown);
+  }
+
+  getNetWorthOption() {
+    return cy.get(this.netWorthOption);
   }
 
   getExperienceRestaurant() {
