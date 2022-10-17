@@ -212,6 +212,16 @@ describe("Why Pokeworks page", () => {
     whyPokeworks.getNetWorthOption().eq(4).click();
   });
 
+  it("Restaurant Experience 'Yes' and 'No' options can be selected ", () => {
+    whyPokeworks.getExperienceRestaurant().eq(0).click();
+    whyPokeworks.getExperienceRestaurant().eq(1).click();
+  });
+
+  it("Franchise Experience 'Yes' and 'No' options can be selected ", () => {
+    whyPokeworks.getExperienceFranchise().eq(0).click();
+    whyPokeworks.getExperienceFranchise().eq(1).click();
+  });
+
   it("Contact form submit button is visible and clickable", () => {
     whyPokeworks.getSubmitBtn().should("be.visible").click();
   });
