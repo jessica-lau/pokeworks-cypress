@@ -215,26 +215,27 @@ describe("Why Pokeworks page", () => {
     });
 
     it("Each option in the net worth dropdown can be selected", () => {
-      whyPokeworks.getNetWorthOption().click();
+      whyPokeworks.getNetWorthDropdown().select();
       whyPokeworks.getNetWorthOption().eq(0).click();
-      whyPokeworks.getNetWorthOption().click();
+      whyPokeworks.getNetWorthDropdown().select();
       whyPokeworks.getNetWorthOption().eq(1).click();
-      whyPokeworks.getNetWorthOption().click();
+      whyPokeworks.getNetWorthDropdown().select();
       whyPokeworks.getNetWorthOption().eq(2).click();
-      whyPokeworks.getNetWorthOption().click();
+      whyPokeworks.getNetWorthDropdown().select();
       whyPokeworks.getNetWorthOption().eq(3).click();
-      whyPokeworks.getNetWorthOption().click();
+      whyPokeworks.getNetWorthDropdown().select();
       whyPokeworks.getNetWorthOption().eq(4).click();
     });
 
     it("Restaurant Experience 'Yes' and 'No' options can be selected ", () => {
-      whyPokeworks.getExperienceRestaurant().eq(0).click();
-      whyPokeworks.getExperienceRestaurant().eq(1).click();
+      cy.get('[type="radio"]')
+        .should("have.attr", "name", "experience-restaurant")
+        .check("No");
     });
 
     it("Franchise Experience 'Yes' and 'No' options can be selected ", () => {
-      whyPokeworks.getExperienceFranchise().eq(0).click();
-      whyPokeworks.getExperienceFranchise().eq(1).click();
+      whyPokeworks.getExperienceFranchise().check("Yes");
+      whyPokeworks.getExperienceFranchise('[type="radio"]').check("No");
     });
 
     it("Contact form submit button is visible and clickable", () => {
