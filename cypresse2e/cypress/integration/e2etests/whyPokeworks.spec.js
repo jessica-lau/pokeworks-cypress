@@ -172,6 +172,7 @@ describe("Why Pokeworks page", () => {
     it("First name field is visible and can be populated", () => {
       whyPokeworks
         .getContactFormField()
+        .eq(0)
         .should("have.attr", "name", "first-name")
         .click()
         .type(inputValues.firstName);
@@ -180,6 +181,7 @@ describe("Why Pokeworks page", () => {
     it("Last name field is visible and can be populated", () => {
       whyPokeworks
         .getContactFormField()
+        .eq(1)
         .should("have.attr", "name", "last-name")
         .click()
         .type(inputValues.lastName);
@@ -188,6 +190,7 @@ describe("Why Pokeworks page", () => {
     it("Email field is visible and can be populated", () => {
       whyPokeworks
         .getContactFormField()
+        .eq(2)
         .should("have.attr", "name", "email")
         .click()
         .type(emailAndPassword.validEmail);
@@ -196,6 +199,7 @@ describe("Why Pokeworks page", () => {
     it("Telephone field is visible and can be populated", () => {
       whyPokeworks
         .getContactFormField()
+        .eq(3)
         .should("have.attr", "name", "phone")
         .click()
         .type(inputValues.phoneNumber);
@@ -204,6 +208,7 @@ describe("Why Pokeworks page", () => {
     it("Area of Interest field is visible and can be populated", () => {
       whyPokeworks
         .getContactFormField()
+        .eq(4)
         .should("have.attr", "name", "area-of-interest")
         .click()
         .type("Business");
