@@ -1,9 +1,9 @@
 class WhyPokeworks {
-  subNavigation = ".secondary_nav > ul > li";
+  subNavigation = ".secondary_nav__inner > ul > li";
   pokeworksHeading = "h1";
   sectionHeading = "h2";
   sectionDescription = ".section-description";
-  sectionButton = ".btn-outlined btn-primary";
+  sectionButton = ".btn-outlined";
   contactFormDescription = ".contact-form-description";
   contactFormField = "p > label > span > input";
   netWorthDropdown = "estimated-net-worth";
