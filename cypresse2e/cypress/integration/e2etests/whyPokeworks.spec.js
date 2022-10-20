@@ -223,14 +223,11 @@ describe("Why Pokeworks page", () => {
     });
 
     it("Restaurant Experience 'Yes' and 'No' options can be selected ", () => {
-      cy.get('[type="radio"]')
-        .should("have.attr", "name", "experience-restaurant")
-        .check("No");
+      cy.get('#experience-restaurant [type="radio"]').check({ force: true });
     });
 
     it("Franchise Experience 'Yes' and 'No' options can be selected ", () => {
-      whyPokeworks.getExperienceFranchise().check("Yes");
-      whyPokeworks.getExperienceFranchise('[type="radio"]').check("No");
+      cy.get('#experience-franchise [type="radio"]').check({ force: true });
     });
 
     it("Contact form submit button is visible and clickable", () => {
