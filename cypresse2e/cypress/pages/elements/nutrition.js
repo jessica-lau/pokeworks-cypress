@@ -4,6 +4,7 @@ class Nutrition {
   menuHeading = "h2";
   searchBarMenu = ".form-control";
   filterDropdown = ".multiselect__tags";
+  allergenFilterToggle = "#allergen-filter-switch";
   menuList = "ul > li";
 
   constructor() {}
