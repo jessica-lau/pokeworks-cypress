@@ -12,6 +12,34 @@ class Nutrition {
   visit() {
     cy.visit("nutrition/");
   }
+
+  getNutritionHeading() {
+    return cy.get(this.nutritionHeading);
+  }
+
+  getNutritionHeading() {
+    return cy.get(this.nutritionDescription);
+  }
+
+  getMenuHeading() {
+    return cy.get(this.menuHeading);
+  }
+
+  getSearchBarMenu() {
+    return cy.get(this.searchBarMenu);
+  }
+
+  getFilterDropdown() {
+    return cy.get(this.filterDropdown);
+  }
+
+  getFilterToggle() {
+    return cy.get(this.allergenFilterToggle);
+  }
+
+  getMenuList() {
+    return cy.get(this.menuList);
+  }
 }
 
 export default Nutrition;
