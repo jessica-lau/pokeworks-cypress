@@ -5,6 +5,7 @@ class Nutrition {
   searchBarMenu = ".form-control";
   filterDropdown = ".multiselect__tags";
   allergenFilterToggle = "#allergen-filter-switch";
+  allergenStatement = ".allergen-statement show";
   menuList = "ul > li";
 
   constructor() {}
@@ -35,6 +36,10 @@ class Nutrition {
 
   getFilterToggle() {
     return cy.get(this.allergenFilterToggle);
+  }
+
+  getAllergenStmt() {
+    return cy.get(this.allergenStatement);
   }
 
   getMenuList() {
