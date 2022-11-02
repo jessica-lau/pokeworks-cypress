@@ -18,7 +18,7 @@ class Nutrition {
     return cy.get(this.nutritionHeading);
   }
 
-  getNutritionHeading() {
+  getNutritionDescription() {
     return cy.get(this.nutritionDescription);
   }
 
