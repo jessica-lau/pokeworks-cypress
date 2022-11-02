@@ -7,5 +7,9 @@ describe("Pokeworks Nutrition page", () => {
     beforeEach(() => {
       nutrition.visit();
     });
+
+    it("Nutrition heading is visible", () => {
+      nutrition.getNutritionHeading().should("be.visible");
+    });
   });
 });
