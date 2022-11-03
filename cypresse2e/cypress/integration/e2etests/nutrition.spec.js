@@ -20,5 +20,11 @@ describe("Pokeworks Nutrition page", () => {
           "Our poke menu offers customizable, low-calorie poke bowls with a variety of bases and proteins"
         );
     });
+
+    it("Interactive Nutrition Menu heading is visible", () => {
+      nutrition
+        .getMenuHeading()
+        .should("contain", "Interactive Nutrition Menu");
+    });
   });
 });
