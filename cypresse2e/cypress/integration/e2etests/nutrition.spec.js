@@ -26,5 +26,9 @@ describe("Pokeworks Nutrition page", () => {
         .getMenuHeading()
         .should("contain", "Interactive Nutrition Menu");
     });
+
+    it("Menu search bar is visible and can be populated", () => {
+      nutrition.getSearchBarMenu().should("be.visible").click().type("salad");
+    });
   });
 });
