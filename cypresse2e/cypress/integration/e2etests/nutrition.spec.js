@@ -30,5 +30,9 @@ describe("Pokeworks Nutrition page", () => {
     it("Menu search bar is visible and can be populated", () => {
       nutrition.getSearchBarMenu().should("be.visible").click().type("salad");
     });
+
+    it("'Lifestyle and Allergen Filter' toggle can be switched on and off", () => {
+      nutrition.getFilterToggle().dblclick();
+    });
   });
 });
