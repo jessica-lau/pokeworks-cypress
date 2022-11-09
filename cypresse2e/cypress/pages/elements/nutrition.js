@@ -3,7 +3,8 @@ class Nutrition {
   nutritionDescription = ".page-content-wrapper > p > span";
   menuHeading = "h2";
   searchBarMenu = ".form-control";
-  filterDropdown = ".multiselect__content-wrapper > ul > li";
+  filterDropdown = ".multiselect__content-wrapper";
+  filterDropdownChoice = ".multiselect__content-wrapper > ul > li";
   allergenFilterToggle = "#allergen-filter-switch";
   allergenStatement = ".allergen-statement show";
   menuList = "ul > li";
@@ -32,6 +33,10 @@ class Nutrition {
 
   getFilterDropdown() {
     return cy.get(this.filterDropdown);
+  }
+
+  getFilterDropdownChoice() {
+    return cy.get(this.filterDropdownChoice);
   }
 
   getFilterToggle() {

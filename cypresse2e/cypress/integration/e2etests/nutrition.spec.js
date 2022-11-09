@@ -37,6 +37,7 @@ describe("Pokeworks Nutrition page", () => {
 
     it("User can choose and add an allergen filter from the dropdown", () => {
       nutrition.getFilterToggle().click();
+      nutrition.getFilterDropdown().click();
     });
   });
 });
