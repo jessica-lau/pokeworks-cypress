@@ -34,5 +34,9 @@ describe("Pokeworks Nutrition page", () => {
     it("'Lifestyle and Allergen Filter' toggle can be switched on and off", () => {
       nutrition.getFilterToggle().dblclick();
     });
+
+    it("User can choose and add an allergen filter from the dropdown", () => {
+      nutrition.getFilterToggle().click();
+    });
   });
 });

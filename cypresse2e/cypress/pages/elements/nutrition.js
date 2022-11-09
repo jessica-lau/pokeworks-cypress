@@ -3,7 +3,7 @@ class Nutrition {
   nutritionDescription = ".page-content-wrapper > p > span";
   menuHeading = "h2";
   searchBarMenu = ".form-control";
-  filterDropdown = ".multiselect__tags";
+  filterDropdown = ".multiselect__content-wrapper > ul > li";
   allergenFilterToggle = "#allergen-filter-switch";
   allergenStatement = ".allergen-statement show";
   menuList = "ul > li";
