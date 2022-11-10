@@ -47,5 +47,9 @@ describe("Pokeworks Nutrition page", () => {
       nutrition.getFilterDropdownChoice().eq(5).click();
       nutrition.getAllergenStmt().should("contain", "does NOT");
     });
+
+    it("User can click on menu category on the menu list", () => {
+      nutrition.getMenuList().eq(1).click();
+    });
   });
 });
