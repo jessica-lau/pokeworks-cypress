@@ -40,5 +40,12 @@ describe("Pokeworks Nutrition page", () => {
       nutrition.getFilterDropdown().click();
       nutrition.getFilterDropdownChoice().eq(3).click();
     });
+
+    it("User can view the statement that menu does not contain allergen", () => {
+      nutrition.getFilterToggle().click();
+      nutrition.getFilterDropdown().click();
+      nutrition.getFilterDropdownChoice().eq(5).click();
+      nutrition.getAllergenStmt().should("contain", "does NOT");
+    });
   });
 });
