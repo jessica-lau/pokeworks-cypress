@@ -53,7 +53,7 @@ describe("Pokeworks Nutrition page", () => {
     });
 
     it("User can select sub menu item under a menu category on the menu list", () => {
-      nutrition.get;
+      nutrition.getSubMenuItem().eq(2).click();
     });
   });
 });
