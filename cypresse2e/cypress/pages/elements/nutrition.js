@@ -7,7 +7,8 @@ class Nutrition {
   filterDropdownChoice = ".multiselect__content-wrapper > ul > li";
   allergenFilterToggle = "#allergen-filter-switch";
   allergenStatement = ".allergen-statement show";
-  menuCategory = "ul > li";
+  menuCategory = ".list-item-content";
+  subMenuItem = ".list-group-item";
 
   constructor() {}
 
@@ -49,6 +50,10 @@ class Nutrition {
 
   getMenuCategory() {
     return cy.get(this.menuCategory);
+  }
+
+  getSubMenuItem() {
+    return cy.get(this.subMenuItem);
   }
 }
 
