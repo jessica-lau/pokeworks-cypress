@@ -1,6 +1,7 @@
 class Nutrition {
   nutritionHeading = ".foreground h1";
   nutritionDescription = ".page-content-wrapper > p > span";
+  pokeworksLogo = "h1 > img";
   menuHeading = "h2";
   searchBarMenu = ".form-control";
   filterDropdown = ".multiselect__content-wrapper";
@@ -22,6 +23,10 @@ class Nutrition {
 
   getNutritionDescription() {
     return cy.get(this.nutritionDescription);
+  }
+
+  getPokeworksLogo() {
+    return cy.get(this.pokeworksLogo);
   }
 
   getMenuHeading() {
