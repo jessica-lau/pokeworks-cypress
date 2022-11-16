@@ -21,6 +21,10 @@ describe("Pokeworks Nutrition page", () => {
         );
     });
 
+    it("Pokeworks logo is visible", () => {
+      nutrition.getPokeworksLogo().should("be.visible");
+    });
+
     it("Interactive Nutrition Menu heading is visible", () => {
       nutrition
         .getMenuHeading()
