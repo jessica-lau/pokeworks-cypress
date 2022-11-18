@@ -6,10 +6,6 @@ class WhyPokeworks {
   sectionButton = ".btn-outlined";
   contactFormDescription = ".contact-form-description";
   contactFormField = "p > label > span > input";
-  netWorthDropdown = "#estimated-net-worth";
-  netWorthOption = "#estimated-net-worth > select > option";
-  experienceRestaurant = 'input[name="experience-restaurant"]';
-  experienceFranchise = "#experience-franchise";
   submitButton = 'input[type="submit"]';
 
   constructor() {}
