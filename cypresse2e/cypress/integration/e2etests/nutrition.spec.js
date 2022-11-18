@@ -22,6 +22,7 @@ describe("Pokeworks Nutrition page", () => {
     });
 
     it("Pokeworks logo is visible", () => {
+      cy.wait(2000);
       nutrition.getPokeworksLogo().should("be.visible");
     });
 
