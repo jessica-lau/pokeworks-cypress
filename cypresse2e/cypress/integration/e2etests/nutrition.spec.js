@@ -27,12 +27,14 @@ describe("Pokeworks Nutrition page", () => {
     });
 
     it("Interactive Nutrition Menu heading is visible", () => {
+      cy.wait(2000);
       nutrition
         .getMenuHeading()
         .should("contain", "Interactive Nutrition Menu");
     });
 
     it("Menu search bar is visible and can be populated", () => {
+      cy.wait(2000);
       nutrition.getSearchBarMenu().should("be.visible").click().type("salad");
     });
 
