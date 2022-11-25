@@ -39,16 +39,19 @@ describe("Pokeworks Nutrition page", () => {
     });
 
     it("'Lifestyle and Allergen Filter' toggle can be switched on and off", () => {
+      cy.wait(2000);
       nutrition.getFilterToggle().dblclick();
     });
 
     it("User can choose and add an allergen filter from the dropdown", () => {
+      cy.wait(2000);
       nutrition.getFilterToggle().click();
       nutrition.getFilterDropdown().click();
       nutrition.getFilterDropdownChoice().eq(3).click();
     });
 
     it("User can view the statement that menu does not contain allergen", () => {
+      cy.wait(2000);
       nutrition.getFilterToggle().click();
       nutrition.getFilterDropdown().click();
       nutrition.getFilterDropdownChoice().eq(5).click();
@@ -56,10 +59,12 @@ describe("Pokeworks Nutrition page", () => {
     });
 
     it("User can click on menu category on the menu list", () => {
+      cy.wait(2000);
       nutrition.getMenuCategory().eq(1).click();
     });
 
     it("User can select sub menu item under a menu category on the menu list", () => {
+      cy.wait(2000);
       nutrition.getSubMenuItem().eq(2).click();
     });
   });
