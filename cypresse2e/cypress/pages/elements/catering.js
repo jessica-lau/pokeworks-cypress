@@ -1,5 +1,6 @@
 class Catering {
   cateringHeading = "h1";
+  cateringDescription = "h2";
   constructor() {}
 
   visit() {
