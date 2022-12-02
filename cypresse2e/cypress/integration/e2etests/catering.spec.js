@@ -7,5 +7,9 @@ describe("Pokeworks Catering page", () => {
     beforeEach(() => {
       catering.visit();
     });
+
+    it("Catering heading is visible", () => {
+      catering.cateringHeading().should("be.visible");
+    });
   });
 });
