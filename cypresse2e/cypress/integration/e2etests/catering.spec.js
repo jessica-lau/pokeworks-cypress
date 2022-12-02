@@ -11,5 +11,15 @@ describe("Pokeworks Catering page", () => {
     it("Catering heading is visible", () => {
       catering.cateringHeading().should("be.visible");
     });
+
+    it("Catering description is visible", () => {
+      catering
+        .cateringDescription()
+        .should("be.visible")
+        .and(
+          "contain",
+          "Make it extra with our uber-fresh seafood and hand-cut vegetables"
+        );
+    });
   });
 });
