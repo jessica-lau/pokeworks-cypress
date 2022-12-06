@@ -37,5 +37,13 @@ describe("Pokeworks Catering page", () => {
         .click();
       cy.url().should("include", "https://catering.pokeworks.com/");
     });
+
+    it("Download Menu button is visible and clickable", () => {
+      cy.get(
+        'a[href="https://drive.google.com/file/d/1TidfiUGv0g7R9HRHGzCtZOayn_90Tcif/view?usp=sharing"]'
+      )
+        .should("be.visible")
+        .click();
+    });
   });
 });
