@@ -21,5 +21,13 @@ describe("Pokeworks Catering page", () => {
           "Make it extra with our uber-fresh seafood and hand-cut vegetables"
         );
     });
+
+    it("First Order Catering button is visible and clickable", () => {
+      cy.get('a[href="https://catering.pokeworks.com"]')
+        .eq(0)
+        .should("be.visible")
+        .click();
+      cy.url().should("include", "https://catering.pokeworks.com/");
+    });
   });
 });
