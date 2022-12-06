@@ -29,5 +29,13 @@ describe("Pokeworks Catering page", () => {
         .click();
       cy.url().should("include", "https://catering.pokeworks.com/");
     });
+
+    it("Second Order Catering button is visible and clickable", () => {
+      cy.get('a[href="https://catering.pokeworks.com"]')
+        .eq(1)
+        .should("be.visible")
+        .click();
+      cy.url().should("include", "https://catering.pokeworks.com/");
+    });
   });
 });
