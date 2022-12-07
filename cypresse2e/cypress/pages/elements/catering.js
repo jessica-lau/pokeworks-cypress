@@ -1,5 +1,5 @@
 class Catering {
-  cateringHeading = "h1";
+  largeHeading = "h1";
   cateringDescription = "h2";
 
   constructor() {}
