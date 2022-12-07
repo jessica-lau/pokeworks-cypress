@@ -9,7 +9,7 @@ describe("Pokeworks Catering page", () => {
     });
 
     it("Catering heading is visible", () => {
-      catering.cateringHeading().should("be.visible");
+      catering.mainHeading().eq(0).should("be.visible");
     });
 
     it("Catering description is visible", () => {
@@ -44,6 +44,10 @@ describe("Pokeworks Catering page", () => {
       )
         .should("be.visible")
         .click();
+    });
+
+    it("'How much poke?' heading is visible", () => {
+      catering.mainHeading().eq(1).should("be.visible");
     });
   });
 });
