@@ -2,6 +2,7 @@ class Catering {
   mainHeading = "h1";
   cateringDescription = "h2";
   buildYourPoke = ".build-your-own-component-inner";
+  sizeOption = "h4";
   buildOwnPokeDescription = ".caption";
 
   constructor() {}
@@ -24,6 +25,10 @@ class Catering {
 
   getBuildPokeDescription() {
     return cy.get(this.buildOwnPokeDescription);
+  }
+
+  getSizeOption() {
+    return cy.get(this.sizeOption);
   }
 }
 
