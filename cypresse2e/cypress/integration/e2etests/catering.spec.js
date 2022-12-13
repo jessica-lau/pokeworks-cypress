@@ -49,5 +49,14 @@ describe("Pokeworks Catering page", () => {
     it("'How much poke?' heading is visible", () => {
       catering.mainHeading().eq(1).should("be.visible");
     });
+
+    it("Build your own poke description is visible", () => {
+      catering
+        .getBuildPokeDescription()
+        .should(
+          "include",
+          "Everything you need to build your own poke bowls, including your choices of bases,"
+        );
+    });
   });
 });
