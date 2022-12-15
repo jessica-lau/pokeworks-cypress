@@ -58,5 +58,11 @@ describe("Pokeworks Catering page", () => {
           "Everything you need to build your own poke bowls, including your choices of bases,"
         );
     });
+
+    it("User can view all size options", () => {
+      catering.getSizeOption().eq(0).should("contain", "SMALL");
+      catering.getSizeOption().eq(1).should("contain", "MEDIUM");
+      catering.getSizeOption().eq(2).should("contain", "LARGE");
+    });
   });
 });
