@@ -4,6 +4,7 @@ class Catering {
   buildYourPoke = ".build-your-own-component-inner";
   sizeOption = "h4";
   sizeOptionBtn = ".option-cta";
+  pokeDishImg = ".build-your-own-component shell > img";
   buildOwnPokeDescription = ".caption";
 
   constructor() {}
@@ -34,6 +35,10 @@ class Catering {
 
   getSizeOptionBtn() {
     return cy.get(this.sizeOptionBtn);
+  }
+
+  getDishesImage() {
+    return cy.get(this.pokeDishImg);
   }
 }
 
