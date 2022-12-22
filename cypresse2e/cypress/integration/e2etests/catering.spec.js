@@ -64,5 +64,11 @@ describe("Pokeworks Catering page", () => {
       catering.getSizeOption().eq(1).should("contain", "MEDIUM");
       catering.getSizeOption().eq(2).should("contain", "LARGE");
     });
+
+    it("User can select all size options", () => {
+      catering.getSizeOptionBtn.eq(0).should("contain", "10 - 25");
+      catering.getSizeOptionBtn.eq(1).should("contain", "26 - 75");
+      catering.getSizeOptionBtn.eq(2).should("contain", "76+");
+    });
   });
 });
