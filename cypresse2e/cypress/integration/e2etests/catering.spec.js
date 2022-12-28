@@ -47,7 +47,11 @@ describe("Pokeworks Catering page", () => {
     });
 
     it("'How much poke?' heading is visible", () => {
-      catering.mainHeading().eq(1).should("be.visible");
+      catering
+        .mainHeading()
+        .eq(1)
+        .should("be.visible")
+        .and("include", "HOW MUCH POKE?");
     });
 
     it("Build your own poke description is visible", () => {
