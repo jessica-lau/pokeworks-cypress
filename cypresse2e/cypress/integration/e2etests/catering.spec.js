@@ -74,5 +74,9 @@ describe("Pokeworks Catering page", () => {
       catering.getSizeOptionBtn.eq(1).should("contain", "26 - 75").click();
       catering.getSizeOptionBtn.eq(2).should("contain", "76+").click();
     });
+
+    it("Poke dish ingredients image is visible", () => {
+      catering.getDishesImage().should("be.visible");
+    });
   });
 });
