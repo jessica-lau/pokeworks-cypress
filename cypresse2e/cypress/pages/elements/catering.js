@@ -1,6 +1,7 @@
 class Catering {
-  mainHeading = "h1";
+  caterHeading = "h1";
   cateringDescription = "h2";
+  howMuchHeading = ".build-your-own > h1";
   buildYourPoke = ".build-your-own-component-inner";
   sizeOption = "h4";
   sizeOptionBtn = ".option-cta";
@@ -13,12 +14,16 @@ class Catering {
     cy.visit("/catering");
   }
 
-  getMainHeading() {
-    return cy.get(this.mainHeading);
+  getCaterHeading() {
+    return cy.get(this.caterHeading);
   }
 
   getCateringDescription() {
     return cy.get(this.cateringDescription);
+  }
+
+  getHowMuchHeading() {
+    return cy.get(this.howMuchHeading);
   }
 
   getBuildYourPoke() {
