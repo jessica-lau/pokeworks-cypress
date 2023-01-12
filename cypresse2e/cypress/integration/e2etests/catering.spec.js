@@ -9,7 +9,10 @@ describe("Pokeworks Catering page", () => {
     });
 
     it("Catering heading is visible", () => {
-      catering.getMainHeading().eq(0).should("be.visible");
+      catering
+        .getCaterHeading()
+        .should("be.visible")
+        .and("contain", "CATERING");
     });
 
     it("Catering description is visible", () => {
@@ -48,10 +51,9 @@ describe("Pokeworks Catering page", () => {
 
     it("'How much poke?' heading is visible", () => {
       catering
-        .getMainHeading()
-        .eq(1)
+        .getHowMuchHeading()
         .should("be.visible")
-        .and("include", "HOW MUCH POKE?");
+        .and("contain", "HOW MUCH POKE?");
     });
 
     it("Build your own poke description is visible", () => {
