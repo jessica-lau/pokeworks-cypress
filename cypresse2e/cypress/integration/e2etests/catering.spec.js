@@ -60,7 +60,7 @@ describe("Pokeworks Catering page", () => {
       catering
         .getBuildPokeDescription()
         .should(
-          "include",
+          "contain",
           "Everything you need to build your own poke bowls, including your choices of bases,"
         );
     });
