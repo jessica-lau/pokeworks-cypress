@@ -6,7 +6,7 @@ class Catering {
   sizeOption = "h4";
   sizeOptionBtn = ".option-cta";
   pokeDishImg = ".build-your-own-component shell > img";
-  buildOwnPokeDescription = ".caption";
+  buildOwnPokeDescription = ".build-your-own-component > .caption";
 
   constructor() {}
 
