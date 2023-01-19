@@ -1,4 +1,8 @@
 class Fundraising {
+  fundraisingHeading = "h1";
+  fundraisingDescription = "h3";
+  howItWorksHeading = "h4";
+  howItWorksDescription = "p";
   constructor() {}
 
   visit() {
