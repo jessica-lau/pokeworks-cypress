@@ -8,6 +8,38 @@ class Fundraising {
   visit() {
     cy.visit("fundraising/");
   }
+
+  getFundraisingHeading() {
+    return cy.get(this.fundraisingHeading);
+  }
+
+  getFundraisingDescrHeading() {
+    return cy.get(this.fundraisingDescription).eq(0);
+  }
+
+  getFundraisingDescr() {
+    return cy.get(this.fundraisingDescription).eq(1);
+  }
+
+  getHowItWorksHeading() {
+    return cy.get(this.howItWorksHeading);
+  }
+
+  getHowItWorksDescrOne() {
+    return cy.get(this.howItWorksDescription).eq(0);
+  }
+
+  getHowItWorksDescrOne() {
+    return cy.get(this.howItWorksDescription).eq(1);
+  }
+
+  getHowItWorksDescrOne() {
+    return cy.get(this.howItWorksDescription).eq(2);
+  }
+
+  getHowItWorksDescrOne() {
+    return cy.get(this.howItWorksDescription).eq(3);
+  }
 }
 
 export default Fundraising;
