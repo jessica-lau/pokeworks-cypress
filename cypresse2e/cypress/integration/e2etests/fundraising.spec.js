@@ -7,5 +7,12 @@ describe("Pokeworks Fundraising page", () => {
     beforeEach(() => {
       fundraising.visit();
     });
+
+    it("Fundraising page heading is visible", () => {
+      fundraising
+        .getFundraisingHeading()
+        .should("be.visible")
+        .and("contain", "FUNDRAISING WITH POKEWORKS");
+    });
   });
 });
