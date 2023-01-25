@@ -31,5 +31,12 @@ describe("Pokeworks Fundraising page", () => {
           "donate a portion of the net sales to your organization."
         );
     });
+
+    it("How fundraising works heading is visible", () => {
+      fundraising
+        .getHowItWorksHeading()
+        .should("be.visible")
+        .and("contain", "How It Works:");
+    });
   });
 });
