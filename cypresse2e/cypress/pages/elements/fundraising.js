@@ -33,11 +33,11 @@ class Fundraising {
     return cy.get(this.howItWorksDescription).eq(1);
   }
 
-  getHowItWorksDescrOne() {
+  getHowItWorksDescrThree() {
     return cy.get(this.howItWorksDescription).eq(2);
   }
 
-  getHowItWorksDescrOne() {
+  getHowItWorksDescrFour() {
     return cy.get(this.howItWorksDescription).eq(3);
   }
 }

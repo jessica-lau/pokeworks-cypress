@@ -38,5 +38,15 @@ describe("Pokeworks Fundraising page", () => {
         .should("be.visible")
         .and("contain", "How It Works:");
     });
+
+    it("How fundraising works description is visible", () => {
+      fundraising
+        .getHowItWorksDescrOne()
+        .should("be.visible")
+        .and(
+          "contain",
+          "host your fundraiser event at your local Pokeworks location."
+        );
+    });
   });
 });
