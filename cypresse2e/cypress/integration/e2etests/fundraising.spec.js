@@ -21,5 +21,15 @@ describe("Pokeworks Fundraising page", () => {
         .should("be.visible")
         .and("contain", "Host Your Next Fundraiser");
     });
+
+    it("Fundraiser description is visible", () => {
+      fundraising
+        .getFundraisingDescr()
+        .should("be.visible")
+        .and(
+          "contain",
+          "donate a portion of the net sales to your organization."
+        );
+    });
   });
 });
