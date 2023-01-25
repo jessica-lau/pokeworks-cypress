@@ -29,7 +29,7 @@ class Fundraising {
     return cy.get(this.howItWorksDescription).eq(0);
   }
 
-  getHowItWorksDescrOne() {
+  getHowItWorksDescrTwo() {
     return cy.get(this.howItWorksDescription).eq(1);
   }
 
