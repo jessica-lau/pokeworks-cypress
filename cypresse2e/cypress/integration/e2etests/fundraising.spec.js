@@ -47,6 +47,24 @@ describe("Pokeworks Fundraising page", () => {
           "contain",
           "host your fundraiser event at your local Pokeworks location."
         );
+      fundraising
+        .getHowItWorksDescrTwo()
+        .should("be.visible")
+        .and(
+          "contain",
+          "receive confirmation about your event with more details."
+        );
+      fundraising
+        .getHowItWorksDescrThree()
+        .should("be.visible")
+        .and(
+          "contain",
+          "receive promotional materials to help spread the word to your organization,"
+        );
+      fundraising
+        .getHowItWorksDescrFour()
+        .should("be.visible")
+        .and("contain", "Fundraisers will be supported in-store and online.");
     });
   });
 });
