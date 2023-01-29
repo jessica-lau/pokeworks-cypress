@@ -66,5 +66,9 @@ describe("Pokeworks Fundraising page", () => {
         .should("be.visible")
         .and("contain", "Fundraisers will be supported in-store and online.");
     });
+
+    it("Link in fundraising description is visible and clickable", () => {
+      cy.get('a[href="https://www.groupraise.com/pokeworks"]').click();
+    });
   });
 });
