@@ -32,6 +32,14 @@ class Locations {
   getMilesTab() {
     return get(this.milesTab);
   }
+
+  getTabHeading() {
+    return get(this.tabHeading);
+  }
+
+  getGoBackStores() {
+    return cy.get(this.backToStores);
+  }
 }
 
 export default Locations;
