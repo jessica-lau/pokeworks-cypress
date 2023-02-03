@@ -10,6 +10,26 @@ class Locations {
   visit() {
     cy.visit("locations/");
   }
+
+  getLocationsHeading() {
+    return cy.get(this.locationsHeading);
+  }
+
+  getSearchBar() {
+    return cy.get(this.searchBar);
+  }
+
+  getSearchBtn() {
+    return get(this.searchBtn);
+  }
+
+  getStatesTab() {
+    return get(this.statesTab);
+  }
+
+  getMilesTab() {
+    return get(this.milesTab);
+  }
 }
 
 export default Locations;
