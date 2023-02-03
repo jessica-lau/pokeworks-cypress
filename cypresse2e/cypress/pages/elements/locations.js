@@ -4,6 +4,8 @@ class Locations {
   searchBtn = ".sl-search-btn";
   statesTab = "#sl-category-tab";
   milesTab = "#sl-distance-tab";
+  tabHeading = ".sl-sec-title";
+  backToStores = ".asl-back-stores";
 
   constructor() {}
 
