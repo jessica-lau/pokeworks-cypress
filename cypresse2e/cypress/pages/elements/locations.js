@@ -22,19 +22,19 @@ class Locations {
   }
 
   getSearchBtn() {
-    return get(this.searchBtn);
+    return cy.get(this.searchBtn);
   }
 
   getStatesTab() {
-    return get(this.statesTab);
+    return cy.get(this.statesTab);
   }
 
   getMilesTab() {
-    return get(this.milesTab);
+    return cy.get(this.milesTab);
   }
 
   getTabHeading() {
-    return get(this.tabHeading);
+    return cy.get(this.tabHeading);
   }
 
   getGoBackStores() {
