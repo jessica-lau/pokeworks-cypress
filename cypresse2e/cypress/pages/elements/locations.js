@@ -2,6 +2,7 @@ class Locations {
   locationsHeading = "#locations-heading";
   searchBar = "#sl-main-search";
   searchBtn = ".sl-search-btn";
+  clearSearch = ".asl-search-clr";
   statesTab = "#sl-category-tab";
   milesTab = "#sl-distance-tab";
   tabList = ".asl-filter-list > ul > li";
@@ -24,6 +25,10 @@ class Locations {
 
   getSearchBtn() {
     return cy.get(this.searchBtn);
+  }
+
+  getClearSearchBtn() {
+    return cy.get(this.clearSearch);
   }
 
   getStatesTab() {
