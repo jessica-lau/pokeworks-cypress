@@ -7,5 +7,14 @@ describe("Pokeworks Locations page", () => {
     beforeEach(() => {
       locations.visit();
     });
+
+    it("Locations heading is visible", () => {
+      locations.getLocationsHeading().shouold("be.visible");
+    });
+
+    it("User can type in location in locations search bar", () => {
+      locations.getSearchBar().click().type("Boston");
+      locations.getSearchBtn().click();
+    });
   });
 });
