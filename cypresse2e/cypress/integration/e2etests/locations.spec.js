@@ -21,5 +21,15 @@ describe("Pokeworks Locations page", () => {
       locations.getSearchBar().click().type("Rodeo Drive, Beverly Hills, CA");
       locations.getClearSearchBtn().click();
     });
+
+    it("User can click on States tab and view states", () => {
+      locations.getStatesTab().click();
+      locations.getTabHeading().should("contain", "States");
+    });
+
+    it("User can click on Miles tab and view distances", () => {
+      locations.getMilesTab().click();
+      locations.getTabHeading().should("contain", "Distance");
+    });
   });
 });
