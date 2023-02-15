@@ -31,5 +31,12 @@ describe("Pokeworks Locations page", () => {
       locations.getMilesTab().click();
       locations.getTabHeading().should("contain", "Distance");
     });
+
+    it("Users can click 'Back to Stores' after clicking States or Miles tab", () => {
+      locations.getStatesTab().click();
+      locations.getGoBackStores().click();
+      locations.getMilesTab().click();
+      locations.getGoBackStores().click();
+    });
   });
 });
