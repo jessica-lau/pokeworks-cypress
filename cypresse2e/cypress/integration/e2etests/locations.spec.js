@@ -22,12 +22,12 @@ describe("Pokeworks Locations page", () => {
       locations.getClearSearchBtn().click();
     });
 
-    it("User can click on States tab and view states", () => {
+    it("User can click on States tab and view states heading", () => {
       locations.getStatesTab().click();
       locations.getTabHeading().should("contain", "States");
     });
 
-    it("User can click on Miles tab and view distances", () => {
+    it("User can click on Miles tab and view distances heading", () => {
       locations.getMilesTab().click();
       locations.getTabHeading().should("contain", "Distance");
     });
