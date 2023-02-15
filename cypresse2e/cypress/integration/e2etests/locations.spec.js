@@ -38,5 +38,12 @@ describe("Pokeworks Locations page", () => {
       locations.getMilesTab().click();
       locations.getGoBackStores().click();
     });
+
+    it("User can select number of miles in the list of options", () => {
+      locations.getMilesTab().click();
+      locations.getTabList().eq(0).click();
+      locations.getGoBackStores().click();
+      locations.getMilesTab().should("contain", "80 Miles");
+    });
   });
 });
