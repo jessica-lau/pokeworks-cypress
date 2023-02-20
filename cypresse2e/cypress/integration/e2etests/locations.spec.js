@@ -44,6 +44,8 @@ describe("Pokeworks Locations page", () => {
       locations.getTabList().eq(0).click();
       locations.getGoBackStores().click();
       locations.getMilesTab().should("contain", "80 Miles");
+      locations.getGoBackStores().click();
+      locations.getTabHeading().should("contain", "80 Miles");
     });
 
     it("User can select a state in the list of options", () => {
