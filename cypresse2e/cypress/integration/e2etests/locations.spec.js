@@ -53,7 +53,7 @@ describe("Pokeworks Locations page", () => {
       locations.getStatesTab().should("contain", "Connecticut");
     });
 
-    it("User can select a state in the list of options", () => {
+    it("User can clear state selected from States tab", () => {
       locations.getStatesTab().click();
       locations.getTabList().eq(6).click();
       locations.getGoBackStores().click();
