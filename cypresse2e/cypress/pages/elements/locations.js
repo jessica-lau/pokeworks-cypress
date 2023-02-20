@@ -7,6 +7,7 @@ class Locations {
   milesTab = "#sl-distance-tab";
   tabList = ".asl-filter-list > ul > li";
   tabHeading = ".sl-sec-title";
+  clearState = ".icon-cancel-1";
   backToStores = ".asl-back-stores";
 
   constructor() {}
@@ -45,6 +46,10 @@ class Locations {
 
   getTabHeading() {
     return cy.get(this.tabHeading);
+  }
+
+  getClearState() {
+    return cy.get(this.clearState);
   }
 
   getGoBackStores() {
