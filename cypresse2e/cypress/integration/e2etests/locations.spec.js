@@ -52,5 +52,13 @@ describe("Pokeworks Locations page", () => {
       locations.getGoBackStores().click();
       locations.getStatesTab().should("contain", "Connecticut");
     });
+
+    it("User can select a state in the list of options", () => {
+      locations.getStatesTab().click();
+      locations.getTabList().eq(6).click();
+      locations.getGoBackStores().click();
+      locations.getStatesTab().should("contain", "Idaho");
+      locations.getClearState().click();
+    });
   });
 });
