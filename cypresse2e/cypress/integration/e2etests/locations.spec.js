@@ -59,6 +59,7 @@ describe("Pokeworks Locations page", () => {
       locations.getGoBackStores().click();
       locations.getStatesTab().should("contain", "Idaho");
       locations.getClearState().click();
+      locations.getStatesTab().should("contain", "States");
     });
   });
 });
