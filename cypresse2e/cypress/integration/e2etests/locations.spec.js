@@ -24,7 +24,7 @@ describe("Pokeworks Locations page", () => {
 
     it("User can click on States tab and view states heading", () => {
       locations.getStatesTab().click();
-      locations.getTabHeading().should("contain", "States");
+      locations.getTabHeading().should("contain", "All States");
     });
 
     it("User can click on Miles tab and view distances heading", () => {
