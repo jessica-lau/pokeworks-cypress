@@ -61,5 +61,10 @@ describe("Pokeworks Locations page", () => {
       locations.getClearState().click();
       locations.getStatesTab().should("contain", "States");
     });
+
+    it("User can type in an address where no stores are found", () => {
+      locations.getSearchBar().click().type("Hong Kong Road, Parish, NY");
+      locations.getNoStore().should("contain", "No Store Found");
+    });
   });
 });
