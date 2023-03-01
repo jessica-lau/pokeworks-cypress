@@ -8,6 +8,7 @@ class Locations {
   tabList = ".asl-filter-list > ul > li";
   tabHeading = ".sl-sec-title";
   backToStores = ".asl-back-stores";
+  noStoreFound = ".sl-no-item";
 
   constructor() {}
 
@@ -49,6 +50,10 @@ class Locations {
 
   getGoBackStores() {
     return cy.get(this.backToStores);
+  }
+
+  getNoStore() {
+    return cy.get(this.noStoreFound);
   }
 }
 
