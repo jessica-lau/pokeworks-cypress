@@ -9,7 +9,7 @@ describe("Pokeworks Locations page", () => {
     });
 
     it("Locations heading is visible", () => {
-      locations.getLocationsHeading().shouold("be.visible");
+      locations.getLocationsHeading().should("be.visible");
     });
 
     it("User can type in location in locations search bar", () => {
