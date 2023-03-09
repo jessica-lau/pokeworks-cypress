@@ -16,7 +16,9 @@ describe("Pokeworks Locations page", () => {
       locations
         .getSearchBar()
         .click()
-        .type("Rodeo Drive, Beverly Hills, CA{enter}");
+        .type("Rodeo Drive, Beverly Hills, CA {enter}");
+      cy.wait(2000);
+      locations.getSearchList().eq(0).should("contain", "Anaheim To Go");
     });
 
     it("User can clear location typed in locations search bar", () => {

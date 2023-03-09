@@ -5,6 +5,7 @@ class Locations {
   clearSearch = ".asl-search-clr";
   statesTab = "#sl-category-tab";
   milesTab = "#sl-distance-tab";
+  searchList = ".sl-item";
   tabList = ".asl-filter-list > ul > li";
   tabHeading = ".sl-sec-title";
   backToStores = ".asl-back-stores";
@@ -38,6 +39,10 @@ class Locations {
 
   getMilesTab() {
     return cy.get(this.milesTab);
+  }
+
+  getSearchList() {
+    return cy.get(this.searchList);
   }
 
   getTabList() {
