@@ -22,7 +22,10 @@ describe("Pokeworks Locations page", () => {
     });
 
     it("User can clear location typed in locations search bar", () => {
-      locations.getSearchBar().click().type("Rodeo Drive, Beverly Hills, CA");
+      locations
+        .getSearchBar()
+        .click()
+        .type("Rodeo Drive, Beverly Hills, CA {enter}");
       locations.getClearSearchBtn().click();
     });
 
