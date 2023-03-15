@@ -4,6 +4,7 @@ class Locations {
   searchBtn = ".sl-search-btn";
   clearSearch = ".asl-search-clr";
   statesTab = "#sl-category-tab";
+  clearState = ".icon-cancel-1";
   milesTab = "#sl-distance-tab";
   searchList = ".sl-item";
   tabList = ".asl-filter-list > ul > li";
@@ -35,6 +36,10 @@ class Locations {
 
   getStatesTab() {
     return cy.get(this.statesTab);
+  }
+
+  getClearState() {
+    return cy.get(this.clearState);
   }
 
   getMilesTab() {

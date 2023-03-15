@@ -49,7 +49,7 @@ describe("Pokeworks Locations page", () => {
 
     it("User can select number of miles in the list of options", () => {
       locations.getMilesTab().click();
-      locations.getTabList().eq(0).click();
+      locations.getTabList().eq(3).click();
       locations.getGoBackStores().click();
       locations.getMilesTab().should("contain", "80 Miles");
     });
