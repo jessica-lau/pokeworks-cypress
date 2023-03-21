@@ -7,7 +7,7 @@ class Locations {
   clearState = ".icon-cancel-1";
   milesTab = "#sl-distance-tab";
   searchList = ".sl-item";
-  tabList = ".asl-filter-list > ul > li";
+  tabList = ".asl-filter-list > ul > li > a";
   tabHeading = ".sl-sec-title";
   backToStores = ".asl-back-stores";
   noStoreFound = ".sl-no-item";
