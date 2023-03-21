@@ -10,7 +10,7 @@ class Locations {
   tabList = ".asl-filter-list > ul > li > a";
   tabHeading = ".sl-sec-title";
   backToStores = ".asl-back-stores";
-  noStoreFound = ".sl-no-item";
+  noStoreFound = "#p-statelist > .sl-no-item";
 
   constructor() {}
 
