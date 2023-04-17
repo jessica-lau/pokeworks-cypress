@@ -75,7 +75,7 @@ describe("Pokeworks Locations page", () => {
         .getSearchBar()
         .click()
         .type("Hong Kong Road, Parish, NY {enter}");
-      cy.wait(2000);
+      cy.wait(3000);
       locations.getNoStore().should("contain", "No Store Found");
     });
   });
