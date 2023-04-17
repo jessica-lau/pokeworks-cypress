@@ -64,7 +64,7 @@ describe("Pokeworks Locations page", () => {
     it("User can clear state selected from States tab", () => {
       locations.getStatesTab().click();
       locations.getTabList().eq(6).click({ force: true, multiple: true });
-      locations.getGoBackStores().click();
+      locations.getGoBackStores().click({ force: true, multiple: true });
       locations.getStatesTab().should("contain", "Idaho");
       locations.getClearState().click();
       locations.getStatesTab().should("contain", "States");
