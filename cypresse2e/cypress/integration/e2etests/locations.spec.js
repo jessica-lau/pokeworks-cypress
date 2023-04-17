@@ -50,14 +50,14 @@ describe("Pokeworks Locations page", () => {
     it("User can select number of miles in the list of options", () => {
       locations.getMilesTab().click();
       locations.getTabList().eq(3).click({ force: true });
-      locations.getGoBackStores().click();
+      locations.getGoBackStores().click({ multiple: true, force: true });
       locations.getMilesTab().should("contain", "80 Miles");
     });
 
     it("User can select a state in the list of options", () => {
       locations.getStatesTab().click();
       locations.getTabList().eq(3).click();
-      locations.getGoBackStores().click();
+      locations.getGoBackStores().click({ multiple: true, force: true });
       locations.getStatesTab().should("contain", "Connecticut");
     });
 
