@@ -51,6 +51,7 @@ describe("Pokeworks Locations page", () => {
       locations.getMilesTab().click();
       locations.getTabList().eq(3).click({ force: true });
       locations.getGoBackStores().click({ multiple: true, force: true });
+      cy.wait(3000);
       locations.getMilesTab().should("contain", "80 Miles");
     });
 
