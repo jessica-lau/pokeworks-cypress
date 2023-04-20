@@ -2,7 +2,7 @@ class Menu {
   constructor() {}
 
   visit() {
-    cy.visit(order.pokeworks.com);
+    cy.visit("order.pokeworks.com");
   }
 }
 
