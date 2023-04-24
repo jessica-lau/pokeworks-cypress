@@ -1,1 +1,9 @@
-import Menu from "../../pages/elements/menu";
+class Menu {
+  constructor() {}
+
+  visit() {
+    cy.visit("order.pokeworks.com");
+  }
+}
+
+export default Menu;
