@@ -7,5 +7,9 @@ describe("Pokeworks Menu page", () => {
     beforeEach(() => {
       menu.visit();
     });
+
+    it("Welcome heading is visible", () => {
+      menu.getWelcomeHeading().should("contain", "Welcome");
+    });
   });
 });
