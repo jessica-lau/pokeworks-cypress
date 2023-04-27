@@ -1,5 +1,7 @@
 class Menu {
   welcomeHeading = "h1";
+  joinRewards = "h2";
+
   constructor() {}
 
   visit() {
@@ -8,6 +10,10 @@ class Menu {
 
   getWelcomeHeading() {
     return cy.get(this.welcomeHeading);
+  }
+
+  getJoinRewards() {
+    return cy.get(this.joinRewards);
   }
 }
 
