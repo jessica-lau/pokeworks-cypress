@@ -1,6 +1,8 @@
 class Menu {
   welcomeHeading = "h1";
   joinRewards = "h2";
+  inputAddress = "#address";
+  searchAddressBtn = "#Search__search-btn";
 
   constructor() {}
 
