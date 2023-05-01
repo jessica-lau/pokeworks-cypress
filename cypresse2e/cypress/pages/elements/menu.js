@@ -17,6 +17,14 @@ class Menu {
   getJoinRewards() {
     return cy.get(this.joinRewards);
   }
+
+  getInputAddress() {
+    return cy.get(this.inputAddress);
+  }
+
+  getSearchAddress() {
+    return cy.get(this.searchAddressBtn);
+  }
 }
 
 export default Menu;
