@@ -17,5 +17,11 @@ describe("Pokeworks Menu page", () => {
         .contains("Search or view nearby locations below")
         .should("be.visible");
     });
+
+    it("Join rewards & earn points should be visible", () => {
+      menu
+        .getJoinRewards()
+        .should("contain", "Join rewards and start earning points!");
+    });
   });
 });
