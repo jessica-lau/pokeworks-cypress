@@ -23,5 +23,9 @@ describe("Pokeworks Menu page", () => {
         .getJoinRewards()
         .should("contain", "Join rewards and start earning points!");
     });
+
+    it("User can populate location into address search bar", () => {
+      menu.getInputAddress().should("be.visible").type("Boston");
+    });
   });
 });
