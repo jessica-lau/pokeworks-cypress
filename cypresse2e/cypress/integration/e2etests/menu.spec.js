@@ -26,6 +26,7 @@ describe("Pokeworks Menu page", () => {
 
     it("User can populate location into address search bar", () => {
       menu.getInputAddress().should("be.visible").type("Boston");
+      menu.getSearchAddress().click();
     });
   });
 });
