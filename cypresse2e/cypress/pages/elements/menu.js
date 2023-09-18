@@ -3,6 +3,7 @@ class Menu {
   joinRewards = "h2";
   inputAddress = "#address";
   searchAddressBtn = "#Search__search-btn";
+  locationRadius = "#search-radius > option";
 
   constructor() {}
 
@@ -24,6 +25,10 @@ class Menu {
 
   getSearchAddress() {
     return cy.get(this.searchAddressBtn);
+  }
+
+  getLocationRadius() {
+    return cy.get(this.locationRadius);
   }
 }
 
