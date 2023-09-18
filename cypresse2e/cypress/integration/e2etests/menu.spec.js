@@ -28,5 +28,11 @@ describe("Pokeworks Menu page", () => {
       menu.getInputAddress().should("be.visible").type("Boston");
       menu.getSearchAddress().click();
     });
+
+    it("User can select 1 mile from location radius dropdown", () => {
+      menu.getInputAddress().should("be.visible").type("Boston");
+      menu.getSearchAddress().click();
+      menu.getLocationRadius().eq(0).should("contain", "1 mile").click();
+    });
   });
 });
