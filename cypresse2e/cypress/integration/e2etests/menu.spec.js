@@ -34,5 +34,35 @@ describe("Pokeworks Menu page", () => {
       menu.getSearchAddress().click();
       menu.getLocationRadius().eq(0).should("contain", "1 mile").click();
     });
+
+    it("User can select 5 miles from location radius dropdown", () => {
+      menu.getInputAddress().should("be.visible").type("Boston");
+      menu.getSearchAddress().click();
+      menu.getLocationRadius().eq(1).should("contain", "5 miles").click();
+    });
+
+    it("User can select 10 miles from location radius dropdown", () => {
+      menu.getInputAddress().should("be.visible").type("Boston");
+      menu.getSearchAddress().click();
+      menu.getLocationRadius().eq(2).should("contain", "10 miles").click();
+    });
+
+    it("User can select 15 miles from location radius dropdown", () => {
+      menu.getInputAddress().should("be.visible").type("Boston");
+      menu.getSearchAddress().click();
+      menu.getLocationRadius().eq(3).should("contain", "15 miles").click();
+    });
+
+    it("User can select 20 miles from location radius dropdown", () => {
+      menu.getInputAddress().should("be.visible").type("Boston");
+      menu.getSearchAddress().click();
+      menu.getLocationRadius().eq(4).should("contain", "20 miles").click();
+    });
+
+    it("User can select 25 miles from location radius dropdown", () => {
+      menu.getInputAddress().should("be.visible").type("Boston");
+      menu.getSearchAddress().click();
+      menu.getLocationRadius().eq(5).should("contain", "25 miles").click();
+    });
   });
 });
