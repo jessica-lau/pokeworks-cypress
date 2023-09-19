@@ -12,13 +12,13 @@ describe("Pokeworks Menu page", () => {
       menu.getWelcomeHeading().should("contain", "Welcome");
     });
 
-    it("Search & view locations description should be visible", () => {
+    it("Search & view locations description is visible", () => {
       cy.get("div")
         .contains("Search or view nearby locations below")
         .should("be.visible");
     });
 
-    it("Join rewards & earn points should be visible", () => {
+    it("Join rewards & earn points is visible", () => {
       menu
         .getJoinRewards()
         .should("contain", "Join rewards and start earning points!");
